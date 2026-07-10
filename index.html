@@ -1193,10 +1193,17 @@
       });
     });
 
-    const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScrTK-OrSz88bJOsub65rcmaGJWjb3ZNpee1w323Q7gaNtqzg/formResponse';
-    const FIELD_NAME = 'entry.1015591207';
-    const FIELD_EMAIL = 'entry.142432339';
-    const FIELD_PATH = 'entry.1061649862';
+    const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSca2pes0_PWOiiSo2R63_U4PMtkOZHLrlm0LeECycqMUoXtIA/formResponse';
+    const FIELD_NAME = 'entry.1096333377';
+    const FIELD_EMAIL = 'entry.612965062';
+    const FIELD_PATH = 'entry.407867896';
+
+    // Hidden iframe target so the Google Forms submission happens
+    // via a real form POST (much less likely to be blocked than a fetch call).
+    const hiddenFrame = document.createElement('iframe');
+    hiddenFrame.name = 'hidden_form_target';
+    hiddenFrame.style.display = 'none';
+    document.body.appendChild(hiddenFrame);
 
     document.querySelectorAll('form').forEach(form => {
       form.addEventListener('submit', (e) => {
@@ -1205,16 +1212,27 @@
         const nameInput = document.getElementById(role === 'learner' ? 'l-name' : 'c-name');
         const emailInput = document.getElementById(role === 'learner' ? 'l-email' : 'c-email');
 
-        const data = new FormData();
-        data.append(FIELD_NAME, nameInput.value);
-        data.append(FIELD_EMAIL, emailInput.value);
-        data.append(FIELD_PATH, role === 'learner' ? 'Learner' : 'Creator');
+        const tempForm = document.createElement('form');
+        tempForm.action = GOOGLE_FORM_ACTION;
+        tempForm.method = 'POST';
+        tempForm.target = 'hidden_form_target';
 
-        fetch(GOOGLE_FORM_ACTION, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: data
-        }).catch(() => {});
+        const fields = {
+          [FIELD_NAME]: nameInput.value,
+          [FIELD_EMAIL]: emailInput.value,
+          [FIELD_PATH]: role === 'learner' ? 'Learner' : 'Creator'
+        };
+        Object.entries(fields).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          tempForm.appendChild(input);
+        });
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+        setTimeout(() => tempForm.remove(), 1000);
 
         document.getElementById('form-shell-' + role).classList.add('hidden');
         document.getElementById('success-' + role).classList.add('show');
