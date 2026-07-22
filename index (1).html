@@ -692,7 +692,7 @@
 
     <div class="top">
       <div class="logo"><span>AI</span>verture</div>
-      <div class="eyebrow">Early access</div>
+      <a href="/best-ai-tools.html" style="font-size:12px;color:var(--slate);text-decoration:none;">Full tools list &rarr;</a>
     </div>
 
     <div class="hero">
@@ -784,6 +784,7 @@
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg></div>
             <h4>What is AI?</h4>
             <p>A plain-language overview of what AI actually is and what it can do for you.</p>
+            <a href="/what-is-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
             <button class="try-btn" data-target="learner" type="button">Try me</button>
           </div>
           <div class="topic-card">
@@ -1198,6 +1199,13 @@
     const FIELD_EMAIL = 'entry.612965062';
     const FIELD_PATH = 'entry.407867896';
 
+    // Hidden iframe target so the Google Forms submission happens
+    // via a real form POST (much less likely to be blocked than a fetch call).
+    const hiddenFrame = document.createElement('iframe');
+    hiddenFrame.name = 'hidden_form_target';
+    hiddenFrame.style.display = 'none';
+    document.body.appendChild(hiddenFrame);
+
     document.querySelectorAll('form').forEach(form => {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -1205,16 +1213,27 @@
         const nameInput = document.getElementById(role === 'learner' ? 'l-name' : 'c-name');
         const emailInput = document.getElementById(role === 'learner' ? 'l-email' : 'c-email');
 
-        const data = new FormData();
-        data.append(FIELD_NAME, nameInput.value);
-        data.append(FIELD_EMAIL, emailInput.value);
-        data.append(FIELD_PATH, role === 'learner' ? 'Learner' : 'Creator');
+        const tempForm = document.createElement('form');
+        tempForm.action = GOOGLE_FORM_ACTION;
+        tempForm.method = 'POST';
+        tempForm.target = 'hidden_form_target';
 
-        fetch(GOOGLE_FORM_ACTION, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: data
-        }).catch(() => {});
+        const fields = {
+          [FIELD_NAME]: nameInput.value,
+          [FIELD_EMAIL]: emailInput.value,
+          [FIELD_PATH]: role === 'learner' ? 'Learner' : 'Creator'
+        };
+        Object.entries(fields).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          tempForm.appendChild(input);
+        });
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+        setTimeout(() => tempForm.remove(), 1000);
 
         document.getElementById('form-shell-' + role).classList.add('hidden');
         document.getElementById('success-' + role).classList.add('show');
