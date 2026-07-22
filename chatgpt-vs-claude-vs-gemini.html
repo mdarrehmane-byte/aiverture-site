@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT vs Claude vs Gemini (2026): Which Free AI Chatbot Should You Use? | Aiverture</title>
+<meta name="description" content="A fair, plain-language comparison of ChatGPT, Claude, and Gemini's free tiers in 2026 — what each one is actually best at, so you can pick without the hype.">
+<meta property="og:title" content="ChatGPT vs Claude vs Gemini: Which Should You Use?">
+<meta property="og:description" content="A fair, no-hype comparison of the three biggest AI chatbots, free tier included.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/chatgpt-vs-claude-vs-gemini.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+
+  .kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-soft); margin-bottom: 12px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 4.5vw, 36px); line-height: 1.2; margin-bottom: 16px; }
+  .dek { color: var(--slate); font-size: 17px; line-height: 1.6; margin-bottom: 12px; }
+  .meta { font-size: 12px; color: var(--slate); margin-bottom: 44px; display: block; }
+
+  article h2 { font-family: var(--font-display); font-size: 22px; margin: 40px 0 14px; }
+  article h3 { font-family: var(--font-display); font-size: 16px; margin: 22px 0 8px; color: var(--orange-soft); }
+  article p { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 16px; }
+  article ul { margin: 0 0 20px 20px; }
+  article li { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 8px; }
+  article strong { color: var(--white); }
+
+  table { width: 100%; border-collapse: collapse; margin: 20px 0 32px; font-size: 14px; }
+  th { font-family: var(--font-display); text-align: left; padding: 10px 12px; color: var(--white); border-bottom: 2px solid var(--border); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: #d5dbf0; }
+  td:first-child, th:first-child { color: var(--slate); font-weight: 500; }
+
+  .callout {
+    background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft);
+    border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6;
+  }
+  .callout strong { color: var(--orange-soft); }
+
+  .cta {
+    margin-top: 56px; text-align: center;
+    background: linear-gradient(180deg, var(--navy-2), var(--navy));
+    border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px;
+  }
+  .cta h2 { margin-top: 0; }
+  .cta p { color: var(--slate); font-size: 14.5px; margin-bottom: 20px; }
+  .cta-btn {
+    display: inline-block; background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft));
+    color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 14.5px;
+    padding: 13px 26px; border-radius: 10px; text-decoration: none;
+  }
+
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+
+  @media (max-width: 480px) { table { font-size: 12.5px; } th, td { padding: 8px 6px; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
+    </div>
+
+    <div class="kicker">Comparison</div>
+    <h1>ChatGPT vs Claude vs Gemini: Which Free AI Chatbot Should You Use?</h1>
+    <p class="dek">A fair comparison, not a sales pitch — what each one actually does well, so you can pick based on your own use case.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 7 min read</span>
+
+    <article>
+      <p>All three of the big AI chatbots offer a genuinely useful free tier in 2026, and all three cost around $20/month if you upgrade. So the real question isn't "which is best" — it's "which is best for what you're about to do." Here's an honest breakdown.</p>
+
+      <h2>The quick answer</h2>
+      <p>If you want the short version: <strong>ChatGPT</strong> has the broadest toolset and plugin ecosystem, <strong>Claude</strong> tends to produce the most reliable, error-free writing and code, and <strong>Gemini</strong> has the most generous free tier and the deepest integration with Google's apps. Most people would do fine with any of the three — the differences matter most if you have a specific, regular task in mind.</p>
+
+      <h2>Free tier comparison</h2>
+      <table>
+        <tr><th></th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr>
+        <tr><td>Free model</td><td>GPT-5.5 (limited)</td><td>Sonnet, session limits</td><td>Gemini Flash</td></tr>
+        <tr><td>Message limits</td><td>~10 msgs / 5 hrs, then smaller model</td><td>Session &amp; weekly caps</td><td>Refreshes every 5 hrs</td></tr>
+        <tr><td>Extras included</td><td>Image analysis, browsing, file uploads</td><td>Long-form quality is notably strong</td><td>Search integration, image gen, voice mode</td></tr>
+        <tr><td>Paid tier price</td><td>$20/mo</td><td>$20/mo ($17/mo billed yearly)</td><td>$19.99/mo</td></tr>
+      </table>
+
+      <h2>Where each one actually stands out</h2>
+
+      <h3>ChatGPT — the broadest all-rounder</h3>
+      <p>ChatGPT has the largest plugin and custom-GPT ecosystem of the three, which matters if you like connecting your AI to other apps and workflows. It's a strong general-purpose choice, especially if you want one assistant that handles a wide variety of unrelated tasks without switching tools.</p>
+
+      <h3>Claude — strong on writing and code quality</h3>
+      <p>Independent testing repeatedly points to Claude producing fewer confident-sounding errors, which matters for anything where accuracy counts more than speed — long documents, detailed analysis, or code that needs to actually run correctly the first time.</p>
+
+      <h3>Gemini — best for Google users and free-tier value</h3>
+      <p>If you already live inside Gmail, Docs, and Search, Gemini's integration is hard to beat — and its free tier is consistently described as the most generous of the three, with built-in search grounding and multimodal features that stay free.</p>
+
+      <div class="callout"><strong>Worth knowing:</strong> AI companies update their models often — sometimes monthly. Named model versions (like specific GPT or Claude numbers) will likely be outdated within a year of reading this. The relative strengths described here tend to hold steadier than the exact version numbers.</div>
+
+      <h2>Which one should you actually pick?</h2>
+      <ul>
+        <li><strong>Writing, analysis, or code that needs to be right the first time</strong> &rarr; Claude</li>
+        <li><strong>Want the widest range of plugins, GPTs, and integrations</strong> &rarr; ChatGPT</li>
+        <li><strong>Already deep in Google apps, or want the most generous free tier</strong> &rarr; Gemini</li>
+        <li><strong>Not sure yet</strong> &rarr; Try all three free tiers on the same real question you actually have, and see which answer you trust most</li>
+      </ul>
+
+      <p>None of these choices are permanent or exclusive — plenty of people end up using two or three, each for what it's best at.</p>
+    </article>
+
+    <div class="cta">
+      <h2>Try them yourself, free</h2>
+      <p>All three have real free tiers worth testing on your own questions before deciding.</p>
+      <a class="cta-btn" href="/learn.html">Back to the Learning Library &rarr;</a>
+    </div>
+
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/best-ai-tools.html">Browse all AI tools</a></footer>
+  </div>
+</body>
+</html>

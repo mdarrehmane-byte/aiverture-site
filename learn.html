@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Learning Library — Free AI Guides | Aiverture</title>
+<meta name="description" content="Free, plain-language guides to AI — from what it is, to comparing tools, to putting it to work. No jargon, no course to finish.">
+<meta property="og:title" content="The Learning Library — Free AI Guides">
+<meta property="og:description" content="Plain-language AI guides, all free, browse at your own pace.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/learn.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+
+  h1 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; margin-bottom: 14px;
+  }
+  h1 .accent {
+    background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .intro { color: var(--slate); font-size: 16px; line-height: 1.6; margin-bottom: 44px; }
+
+  .guide-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .guide-card {
+    display: block;
+    background: linear-gradient(180deg, var(--navy-2), var(--navy));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: var(--white);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .guide-card:hover { border-color: rgba(110,160,255,0.4); transform: translateY(-2px); }
+  .guide-tag {
+    font-family: var(--font-display); font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--blue-soft); margin-bottom: 8px; display: block;
+  }
+  .guide-card h2 { font-family: var(--font-display); font-size: 19px; margin-bottom: 6px; }
+  .guide-card p { color: var(--slate); font-size: 14px; line-height: 1.5; }
+  .guide-meta { color: var(--slate); font-size: 12px; margin-top: 10px; display: block; }
+
+  .coming-soon {
+    border-style: dashed;
+    opacity: 0.55;
+    cursor: default;
+  }
+  .coming-soon:hover { transform: none; border-color: var(--border); }
+
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
+    </div>
+
+    <h1>The <span class="accent">Learning Library</span></h1>
+    <p class="intro">Free, plain-language guides to AI — no jargon, no course to finish, browse whatever's useful to you right now.</p>
+
+    <div class="guide-grid">
+      <a class="guide-card" href="/what-is-ai.html">
+        <span class="guide-tag">Beginner's Guide</span>
+        <h2>What is AI? A Beginner's Guide</h2>
+        <p>No jargon, no prior knowledge needed — a clear answer to a question a lot of people are quietly wondering.</p>
+        <span class="guide-meta">6 min read</span>
+      </a>
+
+      <a class="guide-card" href="/chatgpt-vs-claude-vs-gemini.html">
+        <span class="guide-tag">Comparison</span>
+        <h2>ChatGPT vs Claude vs Gemini</h2>
+        <p>Which free AI chatbot should you actually use? A fair, no-hype comparison.</p>
+        <span class="guide-meta">7 min read</span>
+      </a>
+
+      <a class="guide-card" href="/how-to-automate-with-ai.html">
+        <span class="guide-tag">How-To</span>
+        <h2>How to Automate Your Work With AI</h2>
+        <p>No coding required — real examples and the free tools to start with today.</p>
+        <span class="guide-meta">6 min read</span>
+      </a>
+
+      <a class="guide-card" href="/best-ai-tools-for-creators.html">
+        <span class="guide-tag">For Creators</span>
+        <h2>Best AI Tools for Content Creators</h2>
+        <p>A focused shortlist for creators, not everyone — scripting, thumbnails, editing, and more.</p>
+        <span class="guide-meta">6 min read</span>
+      </a>
+    </div>
+
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/best-ai-tools.html">Browse all AI tools</a></footer>
+  </div>
+</body>
+</html>

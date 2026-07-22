@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Automate Your Work With AI (No Coding Required) | Aiverture</title>
+<meta name="description" content="A beginner's guide to AI automation — what it is, real examples, and the free tools to start with, no coding required.">
+<meta property="og:title" content="How to Automate Your Work With AI">
+<meta property="og:description" content="No coding required. Real examples, free tools to start with.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/how-to-automate-with-ai.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+
+  .kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-soft); margin-bottom: 12px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 4.5vw, 36px); line-height: 1.2; margin-bottom: 16px; }
+  .dek { color: var(--slate); font-size: 17px; line-height: 1.6; margin-bottom: 12px; }
+  .meta { font-size: 12px; color: var(--slate); margin-bottom: 44px; display: block; }
+
+  article h2 { font-family: var(--font-display); font-size: 22px; margin: 40px 0 14px; }
+  article p { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 16px; }
+  article ul, article ol { margin: 0 0 20px 20px; }
+  article li { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 10px; }
+  article strong { color: var(--white); }
+  article a { color: var(--blue-soft); }
+
+  .callout {
+    background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft);
+    border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6;
+  }
+  .callout strong { color: var(--orange-soft); }
+
+  .cta {
+    margin-top: 56px; text-align: center;
+    background: linear-gradient(180deg, var(--navy-2), var(--navy));
+    border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px;
+  }
+  .cta h2 { margin-top: 0; }
+  .cta p { color: var(--slate); font-size: 14.5px; margin-bottom: 20px; }
+  .cta-btn {
+    display: inline-block; background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft));
+    color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 14.5px;
+    padding: 13px 26px; border-radius: 10px; text-decoration: none;
+  }
+
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
+    </div>
+
+    <div class="kicker">How-To</div>
+    <h1>How to Automate Your Work With AI (No Coding Required)</h1>
+    <p class="dek">You don't need to be a developer to make repetitive tasks disappear. Here's where to start.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 6 min read</span>
+
+    <article>
+      <p>"Automation" sounds like something for engineers, but the tools built for it today are made for anyone — no code, just simple visual steps: <em>"when this happens, do that."</em> Here's how to actually start.</p>
+
+      <h2>What AI automation actually means</h2>
+      <p>At its core, automation just means setting up a task once so it keeps happening on its own. The AI part comes in when a step needs judgment — reading an email and deciding how to categorize it, summarizing a document, or writing a reply — instead of a rigid, fixed rule.</p>
+      <p>A simple example: instead of manually checking your inbox, copying new orders into a spreadsheet, and sending a confirmation email, one automation can do all three, every time, without you touching it.</p>
+
+      <h2>Real examples people actually use</h2>
+      <ul>
+        <li><strong>Inbox triage</strong> — automatically label, summarize, or draft replies to incoming emails</li>
+        <li><strong>Social media scheduling</strong> — generate and queue posts across platforms from one input</li>
+        <li><strong>Lead capture</strong> — when someone fills out a form, automatically add them to a spreadsheet and send a welcome email</li>
+        <li><strong>Content repurposing</strong> — turn one long video into short clips, captions, and a blog post automatically</li>
+        <li><strong>Meeting follow-ups</strong> — automatically summarize a call transcript and email action items to attendees</li>
+      </ul>
+
+      <h2>The tools to actually start with</h2>
+      <p>You don't need all of these — pick one and get comfortable before adding more.</p>
+      <ul>
+        <li><strong>Zapier</strong> — the most beginner-friendly place to start, connects over 8,000 apps with a simple free plan</li>
+        <li><strong>Make</strong> — more powerful once you're comfortable, still visual and no-code, generous free tier</li>
+        <li><strong>n8n</strong> — the most flexible option, free if you're willing to self-host it</li>
+        <li><strong>Lindy</strong> — built specifically for AI-driven tasks like inbox and calendar management</li>
+      </ul>
+
+      <div class="callout"><strong>Start small:</strong> your first automation should take you five minutes to set up and save you five minutes a week. Don't start with your most complicated task — start with your most repetitive one.</div>
+
+      <h2>Your first automation, step by step</h2>
+      <ol>
+        <li>Pick one task you do the same way, more than once a week</li>
+        <li>Sign up for Zapier's free plan (or whichever tool fits — see above)</li>
+        <li>Look for a pre-made template close to your task — most tools have a library of these, so you rarely start from a blank page</li>
+        <li>Connect the two apps involved (for example, your email and a spreadsheet)</li>
+        <li>Test it once with real data before turning it fully on</li>
+      </ol>
+
+      <h2>What automation won't do</h2>
+      <p>It's not magic, and it's not fully hands-off forever — automations occasionally break when an app updates, and they work best on tasks with a clear, repeatable pattern. Highly judgment-heavy work still benefits from a human checking in periodically.</p>
+    </article>
+
+    <div class="cta">
+      <h2>Browse automation tools, sorted by price</h2>
+      <p>See the full list of free, trial, and subscription automation tools in Aiverture's directory.</p>
+      <a class="cta-btn" href="/best-ai-tools.html#automation">Browse Automation Tools &rarr;</a>
+    </div>
+
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/learn.html">Back to the Learning Library</a></footer>
+  </div>
+</body>
+</html>
