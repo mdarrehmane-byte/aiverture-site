@@ -791,7 +791,9 @@
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
             <h4>Ask &amp; Research</h4>
             <p>Ask anything and get clear, well-sourced answers in seconds.</p>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/ask-and-research-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
+            <button class="try-btn" id="ask-research-btn" type="button">Try me</button>
+            <span id="ask-research-hint" style="display:none;font-size:11px;color:var(--blue-soft);margin-top:4px;">Copied! Paste it into Claude.</span>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
@@ -1178,6 +1180,24 @@
         }
       });
     });
+
+    const askResearchBtn = document.getElementById('ask-research-btn');
+    if (askResearchBtn) {
+      askResearchBtn.addEventListener('click', async () => {
+        const starterPrompt = "Every learner has a question — what's on your mind? Please explain things in plain English, no jargon, since I'm still learning.";
+        try {
+          await navigator.clipboard.writeText(starterPrompt);
+          const hint = document.getElementById('ask-research-hint');
+          if (hint) {
+            hint.style.display = 'block';
+            setTimeout(() => { hint.style.display = 'none'; }, 4000);
+          }
+        } catch (err) {
+          // Clipboard permission denied or unavailable — still open Claude below
+        }
+        window.open('https://claude.ai', '_blank', 'noopener');
+      });
+    }
 
     document.querySelectorAll('.try-btn').forEach(btn => {
       btn.addEventListener('click', () => {
