@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use AI for Conversation & Support (Beginner's Guide) | Aiverture</title>
+<meta name="description" content="A beginner's guide to using AI to practice conversations, brainstorm, and talk through decisions — plus honest limits on what it can't replace.">
+<meta property="og:title" content="How to Use AI for Conversation & Support">
+<meta property="og:description" content="Practice, brainstorm, or think out loud — starting from the very basics.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/conversation-and-support-with-ai.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+  .kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-soft); margin-bottom: 12px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; margin-bottom: 16px; }
+  .dek { color: var(--slate); font-size: 17px; line-height: 1.6; margin-bottom: 12px; }
+  .meta { font-size: 12px; color: var(--slate); margin-bottom: 44px; display: block; }
+  article h2 { font-family: var(--font-display); font-size: 22px; margin: 40px 0 14px; }
+  article p { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 16px; }
+  article ul { margin: 0 0 20px 20px; }
+  article li { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 10px; }
+  article strong { color: var(--white); }
+  .example-box { background: var(--navy-2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .example-box .cat { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-soft); margin-bottom: 8px; display: block; }
+  .example-box p { margin-bottom: 0; font-style: italic; color: var(--white); font-size: 14.5px; }
+  .callout { background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
+  .callout strong { color: var(--orange-soft); }
+  .cta { margin-top: 56px; text-align: center; background: linear-gradient(180deg, var(--navy-2), var(--navy)); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
+  .cta h2 { margin-top: 0; }
+  .cta p { color: var(--slate); font-size: 14.5px; margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft)); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 14.5px; padding: 13px 26px; border-radius: 10px; text-decoration: none; }
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
+    </div>
+
+    <div class="kicker">Beginner's Guide</div>
+    <h1>How to Use AI for Conversation &amp; Support</h1>
+    <p class="dek">Practice, brainstorm, or think out loud, anytime — starting from the very basics, plus honest limits on what it can't replace.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 5 min read</span>
+
+    <article>
+      <p>Sometimes you don't need an answer — you need to talk something through, practice what you're going to say, or just think out loud with something that responds. AI is genuinely useful here, within real limits worth knowing upfront.</p>
+
+      <h2>What this is actually good for</h2>
+      <p>Practicing a conversation before you have it, brainstorming out loud without judgment, or just organizing your thoughts by explaining them to something that talks back. It's available any time, with infinite patience for you to restart or rephrase.</p>
+
+      <h2>Real examples to try</h2>
+      <div class="example-box"><span class="cat">Practicing for something real</span><p>"Help me practice for a job interview — ask me common questions for a marketing role."</p></div>
+      <div class="example-box"><span class="cat">Preparing for a hard conversation</span><p>"I need to talk to my roommate about splitting chores more fairly. Help me figure out how to bring it up calmly."</p></div>
+      <div class="example-box"><span class="cat">Thinking out loud</span><p>"I'm torn on a decision — can I just talk it through with you?"</p></div>
+      <div class="example-box"><span class="cat">Brainstorming without judgment</span><p>"I have a half-formed idea, help me think out loud and see if it holds up."</p></div>
+
+      <h2>How to get better results</h2>
+      <ul>
+        <li><strong>Be specific about what you want.</strong> "Just listen" and "challenge my thinking" get very different, equally useful responses — say which one you actually want.</li>
+        <li><strong>Treat it like a practice run, not the real thing.</strong> Rehearsing a hard conversation with AI first can genuinely help you feel more prepared for the real one with a real person.</li>
+      </ul>
+
+      <div class="callout"><strong>An honest limit, worth reading:</strong> AI can be a helpful space to think out loud, but it isn't a substitute for real relationships, or for a therapist or counselor when you're genuinely struggling. If something feels heavier than "help me think this through," please reach out to a real person you trust, or a professional — that matters more than anything an AI can offer.</div>
+
+      <h2>Your first thing to try</h2>
+      <p>Think of one conversation you've been putting off, and practice how you'd open it. See how it feels to say it out loud first, even to an AI.</p>
+    </article>
+
+    <div class="cta">
+      <h2>Try it yourself, free</h2>
+      <p>Think something through, out loud, with no judgment.</p>
+      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">Try Claude &rarr;</a>
+    </div>
+
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/learn.html">Back to the Learning Library</a></footer>
+  </div>
+</body>
+</html>

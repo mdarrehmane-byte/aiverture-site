@@ -21,6 +21,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aiverture.com/writing-and-editing-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aiverture.com/analysis-and-problem-solving-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aiverture.com/files-and-documents-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aiverture.com/planning-and-organizing-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aiverture.com/conversation-and-support-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aiverture.com/coding-with-ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aiverture.com/learn.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
