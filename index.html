@@ -270,6 +270,59 @@
     margin-bottom: 22px;
   }
 
+  .quiz-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background: rgba(255,106,26,0.08);
+    border: 1px dashed rgba(255,106,26,0.4);
+    color: var(--orange-soft);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 13px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 18px;
+    transition: background 0.2s ease;
+  }
+  .quiz-toggle svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .quiz-toggle:hover { background: rgba(255,106,26,0.14); }
+  .quiz-toggle:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+  .quiz-toggle.active { background: rgba(255,106,26,0.14); border-style: solid; }
+
+  .quiz-box {
+    display: none;
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .quiz-box.show { display: block; animation: rise 0.3s ease; }
+  .quiz-q {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .quiz-options { display: flex; flex-wrap: wrap; gap: 8px; }
+  .quiz-opt {
+    background: var(--ink);
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .quiz-opt:hover { border-color: rgba(255,106,26,0.5); background: rgba(255,106,26,0.08); }
+  .quiz-opt:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+
   .filter-tabs {
     display: flex;
     gap: 8px;
@@ -920,6 +973,33 @@
         <h3>Every tool. One bridge.</h3>
         <p class="desc">A living directory of AI tools, sorted the way you actually decide: what it costs first, then what it does.</p>
 
+        <button class="quiz-toggle" id="quiz-toggle" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          Not sure where to start? Answer 2 quick questions
+        </button>
+
+        <div class="quiz-box" id="quiz-box">
+          <div class="quiz-step" id="quiz-step-1">
+            <div class="quiz-q">What are you making?</div>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-cat="chatbots" type="button">Chatting &amp; research</button>
+              <button class="quiz-opt" data-cat="image" type="button">Images &amp; graphics</button>
+              <button class="quiz-opt" data-cat="video" type="button">Video</button>
+              <button class="quiz-opt" data-cat="voice" type="button">Voice &amp; audio</button>
+              <button class="quiz-opt" data-cat="automation" type="button">Automating a task</button>
+              <button class="quiz-opt" data-cat="specialized" type="button">Coding, research, or slides</button>
+            </div>
+          </div>
+          <div class="quiz-step" id="quiz-step-2" style="display:none;">
+            <div class="quiz-q">What's your budget?</div>
+            <div class="quiz-options">
+              <button class="quiz-opt" data-price="free" type="button">100% free only</button>
+              <button class="quiz-opt" data-price="trial" type="button">Open to a free trial</button>
+              <button class="quiz-opt" data-price="sub" type="button">Ready to pay monthly</button>
+            </div>
+          </div>
+        </div>
+
         <div class="filter-tabs" id="filter-tabs">
           <button class="filter-tab" data-price="free" type="button">100% Free</button>
           <button class="filter-tab" data-price="trial" type="button">Free Trials</button>
@@ -1171,6 +1251,51 @@
           </div>
         `).join('') || '<div class="empty-hint">More tools coming soon in this category.</div>';
         toolsList.classList.add('show');
+      });
+    });
+
+    // "What should I use?" quiz — reuses the real filter/category buttons above
+    const quizToggle = document.getElementById('quiz-toggle');
+    const quizBox = document.getElementById('quiz-box');
+    const quizStep1 = document.getElementById('quiz-step-1');
+    const quizStep2 = document.getElementById('quiz-step-2');
+    let quizChosenCat = null;
+
+    if (quizToggle) {
+      quizToggle.addEventListener('click', () => {
+        const showing = quizBox.classList.toggle('show');
+        quizToggle.classList.toggle('active', showing);
+      });
+    }
+
+    document.querySelectorAll('#quiz-step-1 .quiz-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        quizChosenCat = opt.dataset.cat;
+        quizStep1.style.display = 'none';
+        quizStep2.style.display = 'block';
+      });
+    });
+
+    document.querySelectorAll('#quiz-step-2 .quiz-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        const chosenPrice = opt.dataset.price;
+        if (!quizChosenCat || !chosenPrice) return;
+
+        const priceTab = document.querySelector('.filter-tab[data-price="' + chosenPrice + '"]');
+        if (priceTab) priceTab.click();
+
+        const catChip = document.querySelector('.cat-chip[data-cat="' + quizChosenCat + '"]');
+        if (catChip) catChip.click();
+
+        quizBox.classList.remove('show');
+        quizToggle.classList.remove('active');
+        quizStep1.style.display = 'block';
+        quizStep2.style.display = 'none';
+        quizChosenCat = null;
+
+        setTimeout(() => {
+          toolsList.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
       });
     });
 
