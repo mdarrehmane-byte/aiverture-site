@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aiverture — Which one are you?</title>
-<meta name="description" content="Aiverture is a free space to learn AI basics from zero, and a directory of every AI tool creators need, sorted by price. AI is the bridge.">
-<meta property="og:title" content="Aiverture — Which one are you?">
-<meta property="og:description" content="Learn AI for free, or find every AI tool in one place. AI is the bridge.">
+<title>Aiverture — من أنت؟</title>
+<meta name="description" content="Aiverture مساحة مجانية لتعلم أساسيات الذكاء الاصطناعي من الصفر، ودليل لكل أداة ذكاء اصطناعي يحتاجها صناع المحتوى، مرتبة حسب السعر. الذكاء الاصطناعي هو الجسر.">
+<meta property="og:title" content="Aiverture — من أنت؟">
+<meta property="og:description" content="تعلّم الذكاء الاصطناعي مجانًا، أو اعثر على كل أداة ذكاء اصطناعي في مكان واحد. الذكاء الاصطناعي هو الجسر.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/ar/">
+<link rel="alternate" hreflang="en" href="https://aiverture.com/">
+<link rel="alternate" hreflang="ar" href="https://aiverture.com/ar/">
+<link rel="alternate" hreflang="x-default" href="https://aiverture.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #080b18;
@@ -25,8 +29,8 @@
     --slate: #8a97c2;
     --border: rgba(255,255,255,0.09);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Tajawal', 'Space Grotesk', sans-serif;
+    --font-body: 'Tajawal', 'Inter', sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -167,7 +171,7 @@
     border-radius: 18px;
     padding: 32px 26px;
     cursor: pointer;
-    text-align: left;
+    text-align: right;
     transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     flex-direction: column;
@@ -217,7 +221,7 @@
   .card[data-role="learner"] .pick { color: var(--blue-soft); }
   .card[data-role="creator"] .pick { color: var(--orange-soft); }
   .card .pick svg { width: 14px; height: 14px; transition: transform 0.2s ease; }
-  .card:hover .pick svg, .card.active .pick svg { transform: translateX(3px); }
+  .card:hover .pick svg, .card.active .pick svg { transform: translateX(-3px); }
 
   /* ---------- Tagline ---------- */
   .tagline {
@@ -483,7 +487,7 @@
 
   .partner-badge {
     display: inline-block;
-    margin-left: 6px;
+    margin-right: 6px;
     font-family: var(--font-body);
     font-size: 9px;
     font-weight: 700;
@@ -621,7 +625,7 @@
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 22px 20px;
-    text-align: left;
+    text-align: right;
   }
   .how-step .num {
     font-family: var(--font-display);
@@ -745,31 +749,34 @@
 
     <div class="top">
       <div class="logo"><span>AI</span>verture</div>
-      <a href="/best-ai-tools.html" style="font-size:12px;color:var(--slate);text-decoration:none;">Full tools list &rarr;</a>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <a href="/best-ai-tools.html" style="font-size:12px;color:var(--slate);text-decoration:none;">كل الأدوات &larr;</a>
+        <a href="/" style="font-size:12px;color:var(--slate);text-decoration:none;border:1px solid var(--border);border-radius:20px;padding:4px 10px;">English</a>
+      </div>
     </div>
 
     <div class="hero">
-      <h1>The world is divided into<br><span class="em-blue">learners</span> and <span class="em-orange">creators</span>.<br>Which one are you?</h1>
-      <p class="sub">Pick a side to see what's waiting for you.</p>
+      <h1>العالم ينقسم إلى<br><span class="em-blue">متعلمين</span> و<span class="em-orange">صنّاع محتوى</span>.<br>من أنت؟</h1>
+      <p class="sub">اختر جانبك لترى ما ينتظرك.</p>
     </div>
 
     <div class="preview-strip">
       <div class="preview-stat">
         <div class="num">14</div>
-        <div class="label">topics to learn</div>
+        <div class="label">موضوع للتعلّم</div>
       </div>
       <div class="preview-stat">
         <div class="num">6</div>
-        <div class="label">tool categories</div>
+        <div class="label">فئات أدوات</div>
       </div>
       <div class="preview-stat">
         <div class="num">100%</div>
-        <div class="label">free to start</div>
+        <div class="label">مجانًا للبدء</div>
       </div>
     </div>
 
     <div class="fork">
-      <div class="bridge-word">AI is the bridge</div>
+      <div class="bridge-word">الذكاء الاصطناعي هو الجسر</div>
       <div class="bridge-line">
         <svg viewBox="0 0 120 3">
           <line x1="0" y1="1.5" x2="120" y2="1.5" stroke="url(#grad)" stroke-width="2" class="beam"/>
@@ -783,43 +790,43 @@
       </div>
 
       <button class="card" data-role="learner" type="button">
-        <span class="tag">For learners</span>
-        <h2>Learn AI, from zero</h2>
-        <p>No jargon, no overwhelm. Just the basics of AI, one step at a time — 100% free, always.</p>
-        <span class="pick">I'm a learner
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <span class="tag">للمتعلمين</span>
+        <h2>تعلّم الذكاء الاصطناعي من الصفر</h2>
+        <p>بدون مصطلحات معقدة، وبدون إرهاق. فقط أساسيات الذكاء الاصطناعي، خطوة بخطوة — مجانًا 100% دائمًا.</p>
+        <span class="pick">أنا متعلم
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
         </span>
       </button>
 
       <button class="card" data-role="creator" type="button">
-        <span class="tag">For creators</span>
-        <h2>Every AI tool, one place</h2>
-        <p>Stop hunting across tabs. Find every AI tool worth knowing, plus the know-how to actually use them.</p>
-        <span class="pick">I'm a creator
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <span class="tag">لصنّاع المحتوى</span>
+        <h2>كل أدوات الذكاء الاصطناعي في مكان واحد</h2>
+        <p>توقف عن البحث في عشرات التبويبات. اعثر على كل أداة ذكاء اصطناعي تستحق المعرفة، مع كيفية استخدامها فعليًا.</p>
+        <span class="pick">أنا صانع محتوى
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
         </span>
       </button>
     </div>
 
-    <p class="tagline"><b>AI is the bridge.</b></p>
+    <p class="tagline"><b>الذكاء الاصطناعي هو الجسر.</b></p>
 
     <section class="how">
-      <div class="how-heading">How it works</div>
+      <div class="how-heading">كيف يعمل الأمر</div>
       <div class="how-steps">
         <div class="how-step">
           <div class="num">1</div>
-          <h4>Pick your path</h4>
-          <p>Learner or creator, whichever fits you right now. You can always explore the other side later.</p>
+          <h4>اختر مسارك</h4>
+          <p>متعلم أو صانع محتوى، أيًا كان ما يناسبك الآن. يمكنك دائمًا استكشاف الجانب الآخر لاحقًا.</p>
         </div>
         <div class="how-step">
           <div class="num">2</div>
-          <h4>Browse, no pressure</h4>
-          <p>Explore the library at your own pace. Nothing is locked behind a course you have to finish first.</p>
+          <h4>تصفّح دون ضغط</h4>
+          <p>استكشف المكتبة بالسرعة التي تناسبك. لا شيء مقفل خلف دورة يجب إنهاؤها أولاً.</p>
         </div>
         <div class="how-step">
           <div class="num">3</div>
-          <h4>Jump in</h4>
-          <p>Learners try real AI tools for free, right away. Creators find the exact tool they need and go use it.</p>
+          <h4>ابدأ فورًا</h4>
+          <p>المتعلمون يجرّبون أدوات ذكاء اصطناعي حقيقية مجانًا، فورًا. صنّاع المحتوى يجدون الأداة التي يحتاجونها بالضبط ويستخدمونها.</p>
         </div>
       </div>
     </section>
@@ -827,209 +834,209 @@
     <!-- Learner panel -->
     <div class="panel" id="panel-learner" data-active="learner">
       <div class="form-shell" id="form-shell-learner">
-        <div class="ptag">Learner path</div>
-        <h3>Start from the very basics</h3>
-        <p class="desc">A browsable library, not a rigid course. Jump to whatever you need, from your very first "what is AI?" to your first working project.</p>
+        <div class="ptag">مسار المتعلم</div>
+        <h3>ابدأ من الأساسيات تمامًا</h3>
+        <p class="desc">مكتبة يمكن تصفّحها، وليست دورة صارمة. انتقل مباشرة إلى ما تحتاجه، من أول سؤال "ما هو الذكاء الاصطناعي؟" إلى أول مشروع حقيقي.</p>
 
-        <div class="library-heading">What's inside</div>
+        <div class="library-heading">ماذا يوجد هنا</div>
         <div class="library-grid" id="basics-grid">
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg></div>
-            <h4>What is AI?</h4>
-            <p>A plain-language overview of what AI actually is and what it can do for you.</p>
-            <a href="/what-is-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <a class="try-btn" href="/learn.html">Try me</a>
+            <h4>ما هو الذكاء الاصطناعي؟</h4>
+            <p>شرح مبسّط لما هو الذكاء الاصطناعي فعليًا وماذا يمكنه أن يفعل لأجلك.</p>
+            <a href="/what-is-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <a class="try-btn" href="/learn.html">جرّبني</a>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-            <h4>Ask &amp; Research</h4>
-            <p>Ask anything and get clear, well-sourced answers in seconds.</p>
-            <a href="/ask-and-research-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" id="ask-research-btn" type="button">Try me</button>
-            <span id="ask-research-hint" style="display:none;font-size:11px;color:var(--blue-soft);margin-top:4px;">Copied! Paste it into Claude.</span>
+            <h4>السؤال والبحث</h4>
+            <p>اسأل أي شيء واحصل على إجابات واضحة وموثّقة خلال ثوانٍ.</p>
+            <a href="/ask-and-research-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" id="ask-research-btn" type="button">جرّبني</button>
+            <span id="ask-research-hint" style="display:none;font-size:11px;color:var(--blue-soft);margin-top:4px;">تم النسخ! الصقه في Claude.</span>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-            <h4>Writing &amp; Editing</h4>
-            <p>Draft, rewrite, and polish anything you write, faster and cleaner.</p>
-            <a href="/writing-and-editing-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>الكتابة والتحرير</h4>
+            <p>اكتب المسودات، أعد الصياغة، ونقّح أي نص تكتبه، بشكل أسرع وأنظف.</p>
+            <a href="/writing-and-editing-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 4 5-8"/></svg></div>
-            <h4>Analysis &amp; Problem Solving</h4>
-            <p>Break down tricky problems and think them through, step by step.</p>
-            <a href="/analysis-and-problem-solving-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>التحليل وحل المشكلات</h4>
+            <p>فكّك المشكلات المعقدة وفكّر فيها خطوة بخطوة.</p>
+            <a href="/analysis-and-problem-solving-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg></div>
-            <h4>Files &amp; Documents</h4>
-            <p>Summarize, extract, and make sense of any document you upload.</p>
-            <a href="/files-and-documents-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>الملفات والمستندات</h4>
+            <p>لخّص، استخرج المعلومات، وافهم أي مستند ترفعه.</p>
+            <a href="/files-and-documents-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
-            <h4>Planning &amp; Organizing</h4>
-            <p>Turn scattered ideas into clear plans, schedules, and to-dos.</p>
-            <a href="/planning-and-organizing-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>التخطيط والتنظيم</h4>
+            <p>حوّل الأفكار المتناثرة إلى خطط واضحة وجداول ومهام.</p>
+            <a href="/planning-and-organizing-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-            <h4>Conversation &amp; Support</h4>
-            <p>Practice, brainstorm, or just talk something through, anytime.</p>
-            <a href="/conversation-and-support-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>المحادثة والدعم</h4>
+            <p>تدرّب، فكّر بصوت عالٍ، أو تحدّث حول أي شيء، في أي وقت.</p>
+            <a href="/conversation-and-support-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <h4>Coding</h4>
-            <p>Write, debug, and understand code, even with zero experience.</p>
-            <a href="/coding-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <h4>البرمجة</h4>
+            <p>اكتب، صحّح الأخطاء، وافهم الكود، حتى بدون أي خبرة سابقة.</p>
+            <a href="/coding-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
         </div>
-        <button class="show-more-btn" data-grid="basics-grid" type="button">Show 4 more</button>
+        <button class="show-more-btn" data-grid="basics-grid" type="button">أظهر 4 المزيد</button>
 
         <div class="library-divider"></div>
-        <div class="library-heading">Level up: intermediate</div>
+        <div class="library-heading">المستوى المتوسط</div>
         <div class="library-grid" id="intermediate-grid">
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-            <h4>Chatbots</h4>
-            <p>Talk to an AI like a person, for research, brainstorming, or just company.</p>
+            <h4>روبوتات المحادثة</h4>
+            <p>تحدّث مع الذكاء الاصطناعي كأنه شخص، للبحث أو العصف الذهني أو مجرّد الأنس.</p>
             <div class="tool-chips"><span class="tool-chip">Google Gemini</span><span class="tool-chip">ChatGPT</span><span class="tool-chip">Claude</span></div>
-            <a href="/chatgpt-vs-claude-vs-gemini.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/chatgpt-vs-claude-vs-gemini.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
-            <h4>Image Creation</h4>
-            <p>Turn a text prompt into original artwork, mockups, or thumbnails.</p>
+            <h4>إنشاء الصور</h4>
+            <p>حوّل النص إلى عمل فني أصلي أو نماذج أو صور مصغّرة.</p>
             <div class="tool-chips"><span class="tool-chip">Google Gemini</span><span class="tool-chip">Midjourney</span><span class="tool-chip">Adobe Firefly</span></div>
-            <a href="/how-to-use-ai-image-generators.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/how-to-use-ai-image-generators.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-            <h4>Video Creation</h4>
-            <p>Generate or edit video clips straight from text, images, or a script.</p>
+            <h4>إنشاء الفيديو</h4>
+            <p>أنشئ أو حرّر مقاطع فيديو مباشرة من نص أو صور أو سيناريو.</p>
             <div class="tool-chips"><span class="tool-chip">Runway</span><span class="tool-chip">Pika</span><span class="tool-chip">Google Veo</span></div>
-            <a href="/how-to-use-ai-video-generators.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/how-to-use-ai-video-generators.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
-            <h4>Voice &amp; Audio</h4>
-            <p>Clone voices, generate narration, or produce music from plain text.</p>
+            <h4>الصوت والمؤثرات الصوتية</h4>
+            <p>استنسخ الأصوات، أنشئ تعليقًا صوتيًا، أو أنتج موسيقى من نص بسيط.</p>
             <div class="tool-chips"><span class="tool-chip">ElevenLabs</span><span class="tool-chip">Suno</span><span class="tool-chip">Murf</span></div>
-            <a href="/how-to-use-ai-voice-tools.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/how-to-use-ai-voice-tools.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
-            <h4>Automation &amp; Agents</h4>
-            <p>Chain AI tasks together so they run on their own, without you.</p>
+            <h4>الأتمتة والوكلاء</h4>
+            <p>اربط مهام الذكاء الاصطناعي معًا لتعمل تلقائيًا دون تدخّلك.</p>
             <div class="tool-chips"><span class="tool-chip">Zapier</span><span class="tool-chip">Make</span><span class="tool-chip">n8n</span></div>
-            <a href="/how-to-automate-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/how-to-automate-with-ai.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
           <div class="topic-card extra">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
-            <h4>Specialized Tools</h4>
-            <p>Niche AI built to do one job really well, from slides to research.</p>
+            <h4>أدوات متخصصة</h4>
+            <p>أدوات ذكاء اصطناعي متخصصة تؤدي مهمة واحدة بإتقان، من العروض التقديمية إلى البحث.</p>
             <div class="tool-chips"><span class="tool-chip">Gamma</span><span class="tool-chip">Perplexity</span><span class="tool-chip">Copilot</span></div>
-            <a href="/specialized-ai-tools-guide.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">Read the full guide</a>
-            <button class="try-btn" data-target="learner" type="button">Try me</button>
+            <a href="/specialized-ai-tools-guide.html" style="font-size:11px;color:var(--slate);text-decoration:underline;margin-bottom:4px;">اقرأ الدليل الكامل</a>
+            <button class="try-btn" data-target="learner" type="button">جرّبني</button>
           </div>
         </div>
-        <button class="show-more-btn" data-grid="intermediate-grid" type="button">Show 3 more</button>
+        <button class="show-more-btn" data-grid="intermediate-grid" type="button">أظهر 3 المزيد</button>
 
         <form data-role="learner">
           <div class="field">
-            <label for="l-name">Your name</label>
+            <label for="l-name">اسمك</label>
             <input id="l-name" type="text" placeholder="Jane Doe" required>
           </div>
           <div class="field">
-            <label for="l-email">Email address</label>
+            <label for="l-email">البريد الإلكتروني</label>
             <input id="l-email" type="email" placeholder="you@email.com" required>
           </div>
-          <button class="submit-btn" type="submit">Join the waitlist</button>
+          <button class="submit-btn" type="submit">انضم لقائمة الانتظار</button>
         </form>
       </div>
       <div class="success" id="success-learner">
         <div class="check">✓</div>
-        <h4>You're in!</h4>
-        <p>We'll email you the moment Aiverture opens for learners.</p>
+        <h4>تم تسجيلك!</h4>
+        <p>سنراسلك بالبريد الإلكتروني فور فتح Aiverture للمتعلمين.</p>
       </div>
     </div>
 
     <!-- Creator panel -->
     <div class="panel" id="panel-creator" data-active="creator">
       <div class="form-shell" id="form-shell-creator">
-        <div class="ptag">Creator path</div>
-        <h3>Every tool. One bridge.</h3>
-        <p class="desc">A living directory of AI tools, sorted the way you actually decide: what it costs first, then what it does.</p>
+        <div class="ptag">مسار صانع المحتوى</div>
+        <h3>كل الأدوات. جسر واحد.</h3>
+        <p class="desc">دليل حيّ لأدوات الذكاء الاصطناعي، مرتّب بالطريقة التي تقرر بها فعليًا: السعر أولًا، ثم الوظيفة.</p>
 
         <button class="quiz-toggle" id="quiz-toggle" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-          Not sure where to start? Answer 2 quick questions
+          لست متأكدًا من أين تبدأ؟ أجب عن سؤالين سريعين
         </button>
 
         <div class="quiz-box" id="quiz-box">
           <div class="quiz-step" id="quiz-step-1">
-            <div class="quiz-q">What are you making?</div>
+            <div class="quiz-q">ماذا تصنع؟</div>
             <div class="quiz-options">
-              <button class="quiz-opt" data-cat="chatbots" type="button">Chatting &amp; research</button>
-              <button class="quiz-opt" data-cat="image" type="button">Images &amp; graphics</button>
-              <button class="quiz-opt" data-cat="video" type="button">Video</button>
-              <button class="quiz-opt" data-cat="voice" type="button">Voice &amp; audio</button>
-              <button class="quiz-opt" data-cat="automation" type="button">Automating a task</button>
-              <button class="quiz-opt" data-cat="specialized" type="button">Coding, research, or slides</button>
+              <button class="quiz-opt" data-cat="chatbots" type="button">محادثة وبحث</button>
+              <button class="quiz-opt" data-cat="image" type="button">صور وتصميم</button>
+              <button class="quiz-opt" data-cat="video" type="button">فيديو</button>
+              <button class="quiz-opt" data-cat="voice" type="button">صوت ومؤثرات صوتية</button>
+              <button class="quiz-opt" data-cat="automation" type="button">أتمتة مهمة</button>
+              <button class="quiz-opt" data-cat="specialized" type="button">برمجة أو بحث أو عروض تقديمية</button>
             </div>
           </div>
           <div class="quiz-step" id="quiz-step-2" style="display:none;">
-            <div class="quiz-q">What's your budget?</div>
+            <div class="quiz-q">ما هي ميزانيتك؟</div>
             <div class="quiz-options">
-              <button class="quiz-opt" data-price="free" type="button">100% free only</button>
-              <button class="quiz-opt" data-price="trial" type="button">Open to a free trial</button>
-              <button class="quiz-opt" data-price="sub" type="button">Ready to pay monthly</button>
+              <button class="quiz-opt" data-price="free" type="button">مجاني بالكامل فقط</button>
+              <button class="quiz-opt" data-price="trial" type="button">منفتح على نسخة تجريبية</button>
+              <button class="quiz-opt" data-price="sub" type="button">مستعد للدفع شهريًا</button>
             </div>
           </div>
         </div>
 
         <div class="filter-tabs" id="filter-tabs">
-          <button class="filter-tab" data-price="free" type="button">100% Free</button>
-          <button class="filter-tab" data-price="trial" type="button">Free Trials</button>
-          <button class="filter-tab" data-price="sub" type="button">Subscriptions</button>
+          <button class="filter-tab" data-price="free" type="button">مجاني 100%</button>
+          <button class="filter-tab" data-price="trial" type="button">نسخ تجريبية</button>
+          <button class="filter-tab" data-price="sub" type="button">اشتراكات</button>
         </div>
 
         <div class="category-row" id="category-row">
           <button class="cat-chip" data-cat="chatbots" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-            Chatbots
+            روبوتات المحادثة
           </button>
           <button class="cat-chip" data-cat="image" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-            Image Creation
+            إنشاء الصور
           </button>
           <button class="cat-chip" data-cat="video" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-            Video Creation
+            إنشاء الفيديو
           </button>
           <button class="cat-chip" data-cat="voice" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
-            Voice &amp; Audio
+            الصوت والمؤثرات الصوتية
           </button>
           <button class="cat-chip" data-cat="automation" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-            Automation Agents
+            الأتمتة والوكلاء
           </button>
           <button class="cat-chip" data-cat="specialized" type="button">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
-            Specialized Tools
+            أدوات متخصصة
           </button>
         </div>
 
@@ -1037,59 +1044,59 @@
 
         <form data-role="creator">
           <div class="field">
-            <label for="c-name">Your name</label>
+            <label for="c-name">اسمك</label>
             <input id="c-name" type="text" placeholder="Jane Doe" required>
           </div>
           <div class="field">
-            <label for="c-email">Email address</label>
+            <label for="c-email">البريد الإلكتروني</label>
             <input id="c-email" type="email" placeholder="you@email.com" required>
           </div>
-          <button class="submit-btn" type="submit">Join the waitlist</button>
+          <button class="submit-btn" type="submit">انضم لقائمة الانتظار</button>
         </form>
       </div>
       <div class="success" id="success-creator">
         <div class="check">✓</div>
-        <h4>You're in!</h4>
-        <p>We'll email you the moment Aiverture opens for creators.</p>
+        <h4>تم تسجيلك!</h4>
+        <p>سنراسلك بالبريد الإلكتروني فور فتح Aiverture لصنّاع المحتوى.</p>
       </div>
     </div>
 
     <section class="faq">
-      <div class="faq-heading">Questions</div>
+      <div class="faq-heading">أسئلة شائعة</div>
 
       <details class="faq-item">
-        <summary>Is Aiverture really free?<span class="plus">+</span></summary>
-        <p>Yes. Learning is 100% free, always. The tool directory is free to browse too — though some of the AI tools listed have their own paid plans, which we always label clearly.</p>
+        <summary>هل Aiverture مجانية فعلاً؟<span class="plus">+</span></summary>
+        <p>نعم. التعلّم مجاني 100% دائمًا. دليل الأدوات أيضًا مجاني للتصفح — رغم أن بعض الأدوات المدرجة لديها خطط مدفوعة خاصة بها، ونوضّح ذلك دائمًا بشكل واضح.</p>
       </details>
 
       <details class="faq-item">
-        <summary>Do I need any experience with AI?<span class="plus">+</span></summary>
-        <p>None at all. The learner library starts from "what is AI?" and builds up from there, at your own pace.</p>
+        <summary>هل أحتاج إلى أي خبرة في الذكاء الاصطناعي؟<span class="plus">+</span></summary>
+        <p>لا حاجة لأي خبرة إطلاقًا. مكتبة المتعلم تبدأ من "ما هو الذكاء الاصطناعي؟" وتتطور من هناك، بالسرعة التي تناسبك.</p>
       </details>
 
       <details class="faq-item">
-        <summary>When does Aiverture launch?<span class="plus">+</span></summary>
-        <p>We're building it right now. Join the waitlist and you'll be the first to know the moment it's ready.</p>
+        <summary>متى يتم إطلاق Aiverture؟<span class="plus">+</span></summary>
+        <p>نحن نبنيها الآن. انضم لقائمة الانتظار وستكون أول من يعلم عندما تكون جاهزة.</p>
       </details>
 
       <details class="faq-item">
-        <summary>I'm already comfortable with AI. Is this still for me?<span class="plus">+</span></summary>
-        <p>Yes, that's the creator path. Skip the basics and go straight to browsing tools by what they cost and what they do.</p>
+        <summary>أنا بالفعل مرتاح مع الذكاء الاصطناعي. هل هذا لي أيضًا؟<span class="plus">+</span></summary>
+        <p>نعم، هذا هو مسار صانع المحتوى. تخطَّ الأساسيات وانتقل مباشرة إلى تصفّح الأدوات حسب سعرها ووظيفتها.</p>
       </details>
 
       <details class="faq-item">
-        <summary>Will more lessons and tools be added over time?<span class="plus">+</span></summary>
-        <p>Constantly. Both libraries are meant to grow as new AI tools launch and new topics become worth learning.</p>
+        <summary>هل سيتم إضافة المزيد من الدروس والأدوات مع الوقت؟<span class="plus">+</span></summary>
+        <p>باستمرار. كلتا المكتبتين مصمَّمتان للنمو مع إطلاق أدوات ذكاء اصطناعي جديدة وظهور مواضيع جديدة تستحق التعلّم.</p>
       </details>
     </section>
 
     <section class="story">
       <div class="story-mark">—</div>
-      <p class="story-text">I built Aiverture because I was that person — drowning in AI tutorials that assumed I already knew everything. Then I watched creators around me waste hours hunting for the right tool instead of actually making things. Aiverture is the bridge I wish had existed for both of us.</p>
-      <p class="story-sign">— the founder of Aiverture</p>
+      <p class="story-text">بنيت Aiverture لأنني كنت ذلك الشخص — غارقًا في دروس الذكاء الاصطناعي التي افترضت أنني أعرف كل شيء بالفعل. ثم رأيت صنّاع المحتوى من حولي يضيّعون ساعات في البحث عن الأداة المناسبة بدلاً من الإنتاج فعليًا. Aiverture هو الجسر الذي تمنيت لو كان موجودًا لكلينا.</p>
+      <p class="story-sign">— مؤسس Aiverture</p>
     </section>
 
-    <footer>Aiverture — the bridge between learning AI and creating with it.</footer>
+    <footer>Aiverture — الجسر بين تعلّم الذكاء الاصطناعي واستخدامه.</footer>
   </div>
 
   <script>
@@ -1245,11 +1252,11 @@
         const items = (toolsData[activePrice] && toolsData[activePrice][activeCat]) || [];
         toolsList.innerHTML = items.map(tool => `
           <div class="topic-card">
-            <h4>${tool.name}${tool.affiliate ? '<span class="partner-badge" title="Eligible for a referral partnership">Partner</span>' : ''}</h4>
+            <h4>${tool.name}${tool.affiliate ? '<span class="partner-badge" title="مؤهّل لشراكة إحالة">شريك</span>' : ''}</h4>
             <p>${tool.desc}</p>
-            <a class="try-btn" href="${tool.url}" target="_blank" rel="noopener">Try me</a>
+            <a class="try-btn" href="${tool.url}" target="_blank" rel="noopener">جرّبني</a>
           </div>
-        `).join('') || '<div class="empty-hint">More tools coming soon in this category.</div>';
+        `).join('') || '<div class="empty-hint">المزيد من الأدوات قادم قريبًا في هذه الفئة.</div>';
         toolsList.classList.add('show');
       });
     });
@@ -1321,7 +1328,7 @@
     const askResearchBtn = document.getElementById('ask-research-btn');
     if (askResearchBtn) {
       askResearchBtn.addEventListener('click', async () => {
-        const starterPrompt = "Every learner has a question — what's on your mind? Please explain things in plain English, no jargon, since I'm still learning.";
+        const starterPrompt = "لكل متعلم سؤال — ما الذي يشغل بالك؟ من فضلك اشرح الأمور بلغة عربية بسيطة وواضحة، بدون مصطلحات معقدة، لأنني ما زلت أتعلم.";
         try {
           await navigator.clipboard.writeText(starterPrompt);
           const hint = document.getElementById('ask-research-hint');
