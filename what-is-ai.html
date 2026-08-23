@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is AI? A Beginner's Guide (2026) | Aiverture</title>
+<meta name="description" content="A plain-language guide to what AI actually is, how it works, and what it can do for you today — no jargon, no prior knowledge needed.">
+<meta property="og:title" content="What is AI? A Beginner's Guide">
+<meta property="og:description" content="No jargon. No prior knowledge needed. Just a clear explanation of what AI actually is.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/what-is-ai.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+
+  .kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-soft); margin-bottom: 12px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; margin-bottom: 16px; }
+  .dek { color: var(--slate); font-size: 17px; line-height: 1.6; margin-bottom: 12px; }
+  .meta { font-size: 12px; color: var(--slate); margin-bottom: 44px; display: block; }
+
+  article h2 { font-family: var(--font-display); font-size: 22px; margin: 40px 0 14px; }
+  article p { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 16px; }
+  article ul { margin: 0 0 20px 20px; }
+  article li { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 8px; }
+  article strong { color: var(--white); }
+
+  .callout {
+    background: var(--navy-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--orange-soft);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 28px 0;
+    font-size: 14.5px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+  .callout strong { color: var(--orange-soft); }
+
+  .cta {
+    margin-top: 56px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--navy-2), var(--navy));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 36px 24px;
+  }
+  .cta h2 { margin-top: 0; }
+  .cta p { color: var(--slate); font-size: 14.5px; margin-bottom: 20px; }
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft));
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 13px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
+    </div>
+
+    <div class="kicker">Beginner's Guide</div>
+    <h1>What is AI? A Beginner's Guide</h1>
+    <p class="dek">No jargon, no prior knowledge needed — just a clear answer to a question a lot of people are quietly wondering.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 6 min read</span>
+
+    <article>
+      <p>If you've felt behind on AI — like everyone else got a memo you missed — you're not alone, and you haven't actually missed much. This guide explains what AI really is, in plain language, starting from zero.</p>
+
+      <h2>What does "AI" actually mean?</h2>
+      <p>AI stands for <strong>artificial intelligence</strong> — computer programs built to do things that normally require human thinking, like understanding language, recognizing images, or making decisions based on patterns.</p>
+      <p>That's it. It's not a robot, not a single product, and not one company's invention. It's a broad category, the same way "vehicle" covers everything from a bicycle to a jet. ChatGPT, Google Gemini, Midjourney, and the spell-checker in your phone are all "AI" — just very different kinds.</p>
+
+      <h2>How does AI actually work?</h2>
+      <p>The AI tools you interact with today — chatbots, image generators, voice tools — mostly work the same basic way: they were shown enormous amounts of existing text, images, or audio, and learned to recognize patterns in it. When you type a question, the AI isn't "looking up" an answer like a search engine. It's predicting, piece by piece, what a good response would look like, based on everything it learned during training.</p>
+      <p>That's why AI can sometimes sound confident but be wrong — it's generating a plausible-sounding answer based on patterns, not checking a database of verified facts. Knowing this one thing will save you from a lot of confusion later.</p>
+
+      <h2>The different types of AI you'll run into</h2>
+      <p>Most AI tools fall into a handful of categories. You don't need to master all of them at once — just knowing they exist helps everything else click into place:</p>
+      <ul>
+        <li><strong>Chatbots</strong> — general-purpose assistants for questions, writing, and research (ChatGPT, Claude, Gemini)</li>
+        <li><strong>Image generators</strong> — turn a text description into a picture (Midjourney, Adobe Firefly)</li>
+        <li><strong>Video generators</strong> — create or edit video clips from text or images (Runway, Pika)</li>
+        <li><strong>Voice tools</strong> — generate speech or clone voices (ElevenLabs, Murf)</li>
+        <li><strong>Automation agents</strong> — chain tasks together so they run without you (Zapier, n8n)</li>
+      </ul>
+
+      <div class="callout"><strong>Worth knowing:</strong> you don't need to understand the technology behind any of these to use them well. You just need to know what each type is good at — the same way you don't need to understand an engine to drive a car.</div>
+
+      <h2>What can AI actually do for you today?</h2>
+      <p>Right now, in 2026, AI is genuinely useful for things like: drafting and editing writing, answering questions and doing quick research, summarizing long documents, brainstorming ideas, generating images for a project, and automating repetitive digital tasks. It's not magic, and it's not always right — but for a huge range of everyday tasks, it saves real time.</p>
+
+      <h2>Common AI myths, debunked</h2>
+      <p><strong>"AI will just replace me."</strong> For most people, AI is closer to a tool that changes how a task gets done than something that eliminates the need for a person entirely — much like how spreadsheets changed accounting without eliminating accountants.</p>
+      <p><strong>"I need to be technical to use it."</strong> Most AI tools today are built for anyone — you type a question or a request in plain English, the same way you'd text a person.</p>
+      <p><strong>"It's too late to start learning."</strong> The tools themselves are still evolving quickly, which actually means there's no "behind" — everyone is relatively early.</p>
+
+      <h2>How to start learning, for free</h2>
+      <p>The best way to understand AI isn't reading about it — it's trying it. Pick one tool, ask it something you're genuinely curious about, and see what comes back. That's the whole first step.</p>
+    </article>
+
+    <div class="cta">
+      <h2>Start with Aiverture's free Learner library</h2>
+      <p>Short, plain-language lessons from "what is AI?" to real projects — 100% free, no course to finish, browse at your own pace.</p>
+      <a class="cta-btn" href="/">Start Learning &rarr;</a>
+    </div>
+
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/best-ai-tools.html">Browse all AI tools</a></footer>
+  </div>
+</body>
+</html>
