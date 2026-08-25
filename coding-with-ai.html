@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Use AI for Coding (Beginner's Guide, Zero Experience) | Aiverture</title>
-<meta name="description" content="A beginner's guide to using AI for coding with zero experience — writing, debugging, and understanding code, real examples to try today.">
-<meta property="og:title" content="How to Use AI for Coding, Zero Experience Needed">
-<meta property="og:description" content="Write, debug, and understand code — starting from the very basics.">
+<title>كيف تستخدم الذكاء الاصطناعي للبرمجة (دليل المبتدئين، بدون خبرة) | Aiverture</title>
+<meta name="description" content="دليل المبتدئين لاستخدام الذكاء الاصطناعي للبرمجة بدون خبرة — كتابة الكود وتصحيحه وفهمه، أمثلة حقيقية لتجربتها اليوم.">
+<meta property="og:title" content="كيف تستخدم الذكاء الاصطناعي للبرمجة، بدون خبرة مطلوبة">
+<meta property="og:description" content="اكتب وصحّح وافهم الكود — بدءًا من الأساسيات تمامًا.">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#080b18">
-<link rel="canonical" href="https://aiverture.com/coding-with-ai.html">
+<link rel="canonical" href="https://aiverture.com/ar/coding-with-ai.html">
+<link rel="alternate" hreflang="en" href="https://aiverture.com/coding-with-ai.html">
+<link rel="alternate" hreflang="ar" href="https://aiverture.com/ar/coding-with-ai.html">
+<link rel="alternate" hreflang="x-default" href="https://aiverture.com/coding-with-ai.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
     --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
     --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
-    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+    --font-display: 'Tajawal', 'Space Grotesk', sans-serif; --font-body: 'Tajawal', 'Inter', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
@@ -45,7 +48,7 @@
   .example-box { background: var(--navy-2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
   .example-box .cat { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-soft); margin-bottom: 8px; display: block; }
   .example-box p { margin-bottom: 0; font-style: italic; color: var(--white); font-size: 14.5px; }
-  .callout { background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
+  .callout { background: var(--navy-2); border: 1px solid var(--border); border-right: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
   .callout strong { color: var(--orange-soft); }
   .cta { margin-top: 56px; text-align: center; background: linear-gradient(180deg, var(--navy-2), var(--navy)); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
   .cta h2 { margin-top: 0; }
@@ -58,48 +61,48 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="/"><span>AI</span>verture</a>
-      <a class="back-link" href="/">&larr; Back to home</a>
+      <a class="logo" href="/ar/"><span>AI</span>verture</a>
+      <a class="back-link" href="/ar/">&rarr; العودة للرئيسية</a>
     </div>
 
-    <div class="kicker">Beginner's Guide</div>
-    <h1>How to Use AI for Coding, Zero Experience Needed</h1>
-    <p class="dek">Write, debug, and understand code — starting from the very basics.</p>
-    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 5 min read</span>
+    <div class="kicker">دليل المبتدئين</div>
+    <h1>كيف تستخدم الذكاء الاصطناعي للبرمجة، بدون خبرة مطلوبة</h1>
+    <p class="dek">اكتب وصحّح وافهم الكود — بدءًا من الأساسيات تمامًا.</p>
+    <span class="meta">Aiverture &middot; آخر تحديث يوليو 2026 &middot; 5 دقائق قراءة</span>
 
     <article>
-      <p>You don't need to know how to code to start using AI for coding — that sounds backwards, but it's true. AI can write code for you, and just as importantly, explain what it's doing along the way.</p>
+      <p>لست بحاجة لمعرفة البرمجة لتبدأ استخدام الذكاء الاصطناعي للبرمجة — يبدو هذا غريبًا، لكنه صحيح. يمكن للذكاء الاصطناعي كتابة الكود لك، والأهم من ذلك، شرح ما يفعله في الطريق.</p>
 
-      <h2>What this actually looks like for a total beginner</h2>
-      <p>You describe what you want to happen, in plain English, and AI writes the code. The real skill worth building isn't memorizing syntax — it's learning to describe problems clearly and to read what the AI gives you back.</p>
+      <h2>كيف يبدو هذا فعليًا للمبتدئ تمامًا</h2>
+      <p>تصف ما تريد أن يحدث، بلغة بسيطة، ويكتب الذكاء الاصطناعي الكود. المهارة الحقيقية التي تستحق البناء ليست حفظ القواعد النحوية — بل تعلّم وصف المشكلات بوضوح وقراءة ما يعطيك إياه الذكاء الاصطناعي.</p>
 
-      <h2>Real examples to try</h2>
-      <div class="example-box"><span class="cat">Understanding an error</span><p>"I got this error message — explain what it means in plain English."</p></div>
-      <div class="example-box"><span class="cat">Writing something simple</span><p>"Write a simple script that renames all the files in a folder by adding today's date to each name."</p></div>
-      <div class="example-box"><span class="cat">Learning by reading</span><p>"Explain what this code does, line by line, like I've never coded before."</p></div>
-      <div class="example-box"><span class="cat">Fixing something broken</span><p>"This code isn't working the way I expect — help me figure out why."</p></div>
+      <h2>أمثلة حقيقية لتجربتها</h2>
+      <div class="example-box"><span class="cat">فهم خطأ</span><p>"حصلت على رسالة الخطأ هذه — اشرح ما تعنيه بلغة بسيطة."</p></div>
+      <div class="example-box"><span class="cat">كتابة شيء بسيط</span><p>"اكتب سكريبت بسيط يعيد تسمية كل الملفات في مجلد بإضافة تاريخ اليوم لكل اسم."</p></div>
+      <div class="example-box"><span class="cat">التعلّم بالقراءة</span><p>"اشرح ماذا يفعل هذا الكود، سطرًا بسطر، وكأنني لم أبرمج من قبل."</p></div>
+      <div class="example-box"><span class="cat">إصلاح شيء معطل</span><p>"هذا الكود لا يعمل بالطريقة التي أتوقعها — ساعدني في معرفة السبب."</p></div>
 
-      <h2>How to get better results</h2>
+      <h2>كيف تحصل على نتائج أفضل</h2>
       <ul>
-        <li><strong>Ask for explanations, not just code.</strong> "Explain what this does" turns every answer into a small lesson instead of a black box you copy and paste.</li>
-        <li><strong>Start small.</strong> A script that does one simple thing is a better first project than an ambitious app — build up from there.</li>
-        <li><strong>Always test before trusting.</strong> Run the code somewhere safe and check the output actually does what you expected, especially before using it on anything important.</li>
+        <li><strong>اطلب شروحات، ليس فقط الكود.</strong> "اشرح ماذا يفعل هذا" يحوّل كل إجابة إلى درس صغير بدلاً من صندوق أسود تنسخه وتلصقه.</li>
+        <li><strong>ابدأ صغيرًا.</strong> سكريبت يفعل شيئًا بسيطًا واحدًا هو مشروع أول أفضل من تطبيق طموح — ابنِ من هناك.</li>
+        <li><strong>اختبر دائمًا قبل الثقة.</strong> شغّل الكود في مكان آمن وتحقق أن المخرجات تفعل فعليًا ما توقعته، خاصة قبل استخدامه على أي شيء مهم.</li>
       </ul>
 
-      <div class="callout"><strong>Worth knowing:</strong> AI-written code can look correct and still contain mistakes, especially in edge cases. For anything that touches real data or money, have it explain its logic and test carefully before relying on it.</div>
+      <div class="callout"><strong>يستحق المعرفة:</strong> الكود المكتوب بالذكاء الاصطناعي قد يبدو صحيحًا ولا يزال يحتوي أخطاء، خاصة في الحالات الاستثنائية. لأي شيء يمس بيانات حقيقية أو مالًا، اجعله يشرح منطقه واختبر بعناية قبل الاعتماد عليه.</div>
 
-      <h2>Your first thing to try</h2>
-      <p>Think of one small, repetitive task on your computer you wish would just happen automatically, and ask AI to write something simple that does it. That's a real first project.</p>
+      <h2>أول شيء تجربه</h2>
+      <p>فكّر في مهمة صغيرة متكررة واحدة على حاسوبك تتمنى لو حدثت تلقائيًا، واطلب من الذكاء الاصطناعي كتابة شيء بسيط يفعلها. هذا مشروع أول حقيقي.</p>
     </article>
 
     <div class="cta">
-      <h2>Try it yourself, free</h2>
-      <p>Describe something you want built and see what comes back.</p>
-      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">Try Claude &rarr;</a>
+      <h2>جرّبه بنفسك، مجانًا</h2>
+      <p>صف شيئًا تريد بناءه وانظر ماذا يأتيك.</p>
+      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">جرّب Claude &larr;</a>
     </div>
 
-    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
-    <a href="/">aiverture.com</a> &middot; <a href="/learn.html">Back to the Learning Library</a></footer>
+    <footer>Aiverture — الجسر بين تعلّم الذكاء الاصطناعي واستخدامه.<br>
+    <a href="/ar/">aiverture.com</a> &middot; <a href="/ar/learn.html">العودة إلى مكتبة التعلّم</a></footer>
   </div>
 </body>
 </html>
