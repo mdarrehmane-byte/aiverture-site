@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>كيف تستخدم مولدات الصور بالذكاء الاصطناعي (دليل المبتدئين) | Aiverture</title>
-<meta name="description" content="دليل المبتدئين لإنشاء الصور بالذكاء الاصطناعي — كيف تكتب أوامر تعمل، أمثلة حقيقية، وماذا تتوقع من أدوات مثل Midjourney وAdobe Firefly.">
-<meta property="og:title" content="كيف تستخدم مولدات الصور بالذكاء الاصطناعي">
-<meta property="og:description" content="كيف تكتب أوامر تعمل فعليًا — بدءًا من الأساسيات تمامًا.">
+<title>How to Use AI Image Generators (Beginner's Guide) | Aiverture</title>
+<meta name="description" content="A beginner's guide to AI image generation — how to write prompts that work, real examples, and what to expect from tools like Midjourney and Adobe Firefly.">
+<meta property="og:title" content="How to Use AI Image Generators">
+<meta property="og:description" content="How to write prompts that actually work — starting from the very basics.">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#080b18">
-<link rel="canonical" href="https://aiverture.com/ar/how-to-use-ai-image-generators.html">
-<link rel="alternate" hreflang="en" href="https://aiverture.com/how-to-use-ai-image-generators.html">
-<link rel="alternate" hreflang="ar" href="https://aiverture.com/ar/how-to-use-ai-image-generators.html">
-<link rel="alternate" hreflang="x-default" href="https://aiverture.com/how-to-use-ai-image-generators.html">
+<link rel="canonical" href="https://aiverture.com/how-to-use-ai-image-generators.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
     --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
     --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
-    --font-display: 'Tajawal', 'Space Grotesk', sans-serif; --font-body: 'Tajawal', 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
@@ -49,7 +46,7 @@
   .example-box { background: var(--navy-2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
   .example-box .cat { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-soft); margin-bottom: 8px; display: block; }
   .example-box p { margin-bottom: 0; font-style: italic; color: var(--white); font-size: 14.5px; }
-  .callout { background: var(--navy-2); border: 1px solid var(--border); border-right: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
+  .callout { background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
   .callout strong { color: var(--orange-soft); }
   .cta { margin-top: 56px; text-align: center; background: linear-gradient(180deg, var(--navy-2), var(--navy)); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
   .cta h2 { margin-top: 0; }
@@ -62,51 +59,51 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="/ar/"><span>AI</span>verture</a>
-      <a class="back-link" href="/ar/">&rarr; العودة للرئيسية</a>
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
     </div>
 
-    <div class="kicker">دليل متوسط</div>
-    <h1>كيف تستخدم مولدات الصور بالذكاء الاصطناعي</h1>
-    <p class="dek">حوّل وصفًا نصيًا إلى صورة حقيقية — كيف تكتب أوامر تعمل، وليس فقط أوامر تبدو جيدة.</p>
-    <span class="meta">Aiverture &middot; آخر تحديث يوليو 2026 &middot; 6 دقائق قراءة</span>
+    <div class="kicker">Intermediate Guide</div>
+    <h1>How to Use AI Image Generators</h1>
+    <p class="dek">Turn a text description into an actual image — how to write prompts that work, not just prompts that sound good.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 6 min read</span>
 
     <article>
-      <p>الفجوة بين صورة ذكاء اصطناعي متوسطة وأخرى رائعة فعليًا عادة ليست الأداة — بل الأمر. إليك كيف تغلق هذه الفجوة.</p>
+      <p>The gap between a mediocre AI image and a genuinely great one usually isn't the tool — it's the prompt. Here's how to close that gap.</p>
 
-      <h2>كيف تعمل هذه الأدوات فعليًا</h2>
-      <p>تكتب وصفًا، وتنشئ الأداة صورة تطابقه، عادة مع تقديم بضع اختلافات للاختيار منها. الأدوات المختلفة لديها نقاط قوة مختلفة — <a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a> يميل لنتائج فنية لافتة، بينما <a href="https://firefly.adobe.com" target="_blank" rel="noopener">Adobe Firefly</a> مبني لصور آمنة للاستخدام التجاري. كلاهما يبدأ من نفس الفكرة الأساسية: كلماتك تصبح الصورة.</p>
+      <h2>How these tools actually work</h2>
+      <p>You type a description, and the tool generates an image matching it, usually offering a few variations to pick from. Different tools have different strengths — <a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a> leans toward striking, artistic results, while <a href="https://firefly.adobe.com" target="_blank" rel="noopener">Adobe Firefly</a> is built for safe, commercial-use images. Both start from the same basic idea: your words become the image.</p>
 
-      <h2>معادلة الأوامر التي تعمل فعليًا</h2>
-      <p>الأمر القوي عادة له أربعة أجزاء: <strong>الموضوع</strong> (ما الذي في الصورة)، <strong>الأسلوب</strong> (صورة فوتوغرافية، رسم توضيحي، رندر ثلاثي الأبعاد، إلخ)، <strong>التفاصيل</strong> (الإضاءة، اللون، المزاج)، و<strong>التكوين</strong> (لقطة قريبة، لقطة واسعة، زاوية). لست بحاجة للأربعة كلها في كل مرة، لكن الاعتماد على هذا الهيكل يحوّل النتائج الغامضة إلى دقيقة.</p>
+      <h2>The prompt formula that actually works</h2>
+      <p>A strong prompt usually has four parts: <strong>subject</strong> (what's in the image), <strong>style</strong> (photo, illustration, 3D render, etc.), <strong>details</strong> (lighting, color, mood), and <strong>composition</strong> (close-up, wide shot, angle). You don't need all four every time, but leaning on this structure turns vague results into precise ones.</p>
 
-      <h2>أمثلة حقيقية لتجربتها</h2>
-      <div class="example-box"><span class="cat">أمر ضعيف</span><p>"قطة"</p></div>
-      <div class="example-box"><span class="cat">أمر قوي</span><p>"قطة برتقالية تجلس على حافة نافذة مشمسة، ضوء صباحي ناعم، واقعية فوتوغرافية، عمق ميدان ضحل"</p></div>
-      <div class="example-box"><span class="cat">لوسائل التواصل الاجتماعي</span><p>"ترتيب علوي بسيط لقهوة ودفتر، ألوان دافئة، زاوية علوية، جاهز لإنستغرام"</p></div>
-      <div class="example-box"><span class="cat">لنموذج مشروع</span><p>"شاشة تسجيل دخول تطبيق جوال حديث، واجهة نظيفة، نظام ألوان أزرق وأبيض، أسلوب تصميم مسطح"</p></div>
+      <h2>Real examples to try</h2>
+      <div class="example-box"><span class="cat">Weak prompt</span><p>"A cat"</p></div>
+      <div class="example-box"><span class="cat">Strong prompt</span><p>"A ginger cat sitting on a sunlit windowsill, soft morning light, photorealistic, shallow depth of field"</p></div>
+      <div class="example-box"><span class="cat">For social media</span><p>"A minimalist flat-lay of coffee and a notebook, warm tones, top-down angle, Instagram-ready"</p></div>
+      <div class="example-box"><span class="cat">For a project mockup</span><p>"A modern mobile app login screen, clean UI, blue and white color scheme, flat design style"</p></div>
 
-      <h2>نصائح لنتائج أفضل</h2>
+      <h2>Tips for better results</h2>
       <ul>
-        <li><strong>كرّر، لا تبدأ من جديد.</strong> إذا كانت قريبة لكن ليست صحيحة، عدّل تفصيلاً واحدًا في كل مرة بدلاً من إعادة كتابة الأمر بأكمله.</li>
-        <li><strong>استشهد بأساليب حقيقية عند الحاجة.</strong> "بأسلوب لوحة ألوان مائية" يعطي توجيهًا أوضح من وصف الألوان وحدها.</li>
-        <li><strong>اعرف ما هو مجاني مقابل مدفوع قبل أن تبدأ.</strong> بعض الأدوات مثل Google Gemini وStable Diffusion لديها خطط مجانية فعلية؛ أخرى مثل Midjourney مدفوعة فقط من البداية.</li>
+        <li><strong>Iterate, don't restart.</strong> If it's close but not right, adjust one detail at a time rather than rewriting the whole prompt.</li>
+        <li><strong>Reference real styles when helpful.</strong> "In the style of a watercolor painting" gives clearer direction than describing colors alone.</li>
+        <li><strong>Know what's free vs. paid before you start.</strong> Some tools like Google Gemini and Stable Diffusion have genuinely free tiers; others like Midjourney are subscription-only from the start.</li>
       </ul>
 
-      <div class="callout"><strong>يستحق المعرفة:</strong> معظم أدوات الصور بالذكاء الاصطناعي لديها سياسات استخدام ضد إنشاء صور لأشخاص حقيقيين دون موافقة، أو محتوى مضلل/خادع. التزم بأفكار أصلية وستتجنب الاصطدام بأي من هذه الحدود.</div>
+      <div class="callout"><strong>Worth knowing:</strong> most AI image tools have usage policies against generating images of real people without consent, or misleading/deceptive content. Stick to original ideas and you'll avoid running into any of these limits.</div>
 
-      <h2>أول شيء تجربه</h2>
-      <p>اختر شيئًا ستستخدمه فعليًا — صورة مصغرة، هدية، نموذج — واكتب أمرًا باستخدام معادلة الموضوع/الأسلوب/التفاصيل/التكوين أعلاه.</p>
+      <h2>Your first thing to try</h2>
+      <p>Pick something you'd genuinely use — a thumbnail, a gift, a mockup — and write a prompt using the subject/style/details/composition formula above.</p>
     </article>
 
     <div class="cta">
-      <h2>شاهد أدوات الصور المجانية مقابل المدفوعة</h2>
-      <p>تصفّح فئة إنشاء الصور الكاملة، مرتبة حسب السعر.</p>
-      <a class="cta-btn" href="/ar/best-ai-tools.html#image">تصفّح أدوات الصور &larr;</a>
+      <h2>See free vs. paid image tools</h2>
+      <p>Browse the full image generation category, sorted by price.</p>
+      <a class="cta-btn" href="/best-ai-tools.html#image">Browse Image Tools &rarr;</a>
     </div>
 
-    <footer>Aiverture — الجسر بين تعلّم الذكاء الاصطناعي واستخدامه.<br>
-    <a href="/ar/">aiverture.com</a> &middot; <a href="/ar/learn.html">العودة إلى مكتبة التعلّم</a></footer>
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/learn.html">Back to the Learning Library</a></footer>
   </div>
 </body>
 </html>

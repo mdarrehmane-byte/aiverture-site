@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>كيف تستخدم الذكاء الاصطناعي للمحادثة والدعم (دليل المبتدئين) | Aiverture</title>
-<meta name="description" content="دليل المبتدئين لاستخدام الذكاء الاصطناعي للتدرب على المحادثات والعصف الذهني والتفكير في القرارات — بالإضافة إلى حدود صادقة لما لا يمكنه استبداله.">
-<meta property="og:title" content="كيف تستخدم الذكاء الاصطناعي للمحادثة والدعم">
-<meta property="og:description" content="تدرّب، فكّر بصوت عالٍ — بدءًا من الأساسيات تمامًا.">
+<title>How to Use AI for Conversation & Support (Beginner's Guide) | Aiverture</title>
+<meta name="description" content="A beginner's guide to using AI to practice conversations, brainstorm, and talk through decisions — plus honest limits on what it can't replace.">
+<meta property="og:title" content="How to Use AI for Conversation & Support">
+<meta property="og:description" content="Practice, brainstorm, or think out loud — starting from the very basics.">
 <meta property="og:type" content="article">
 <meta name="theme-color" content="#080b18">
-<link rel="canonical" href="https://aiverture.com/ar/conversation-and-support-with-ai.html">
-<link rel="alternate" hreflang="en" href="https://aiverture.com/conversation-and-support-with-ai.html">
-<link rel="alternate" hreflang="ar" href="https://aiverture.com/ar/conversation-and-support-with-ai.html">
-<link rel="alternate" hreflang="x-default" href="https://aiverture.com/conversation-and-support-with-ai.html">
+<link rel="canonical" href="https://aiverture.com/conversation-and-support-with-ai.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
     --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
     --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
-    --font-display: 'Tajawal', 'Space Grotesk', sans-serif; --font-body: 'Tajawal', 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
@@ -48,7 +45,7 @@
   .example-box { background: var(--navy-2); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
   .example-box .cat { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-soft); margin-bottom: 8px; display: block; }
   .example-box p { margin-bottom: 0; font-style: italic; color: var(--white); font-size: 14.5px; }
-  .callout { background: var(--navy-2); border: 1px solid var(--border); border-right: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
+  .callout { background: var(--navy-2); border: 1px solid var(--border); border-left: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
   .callout strong { color: var(--orange-soft); }
   .cta { margin-top: 56px; text-align: center; background: linear-gradient(180deg, var(--navy-2), var(--navy)); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
   .cta h2 { margin-top: 0; }
@@ -61,47 +58,47 @@
 <body>
   <div class="wrap">
     <div class="top">
-      <a class="logo" href="/ar/"><span>AI</span>verture</a>
-      <a class="back-link" href="/ar/">&rarr; العودة للرئيسية</a>
+      <a class="logo" href="/"><span>AI</span>verture</a>
+      <a class="back-link" href="/">&larr; Back to home</a>
     </div>
 
-    <div class="kicker">دليل المبتدئين</div>
-    <h1>كيف تستخدم الذكاء الاصطناعي للمحادثة والدعم</h1>
-    <p class="dek">تدرّب، فكّر بصوت عالٍ، أو فكّر في أي وقت — بدءًا من الأساسيات تمامًا، بالإضافة إلى حدود صادقة لما لا يمكنه استبداله.</p>
-    <span class="meta">Aiverture &middot; آخر تحديث يوليو 2026 &middot; 5 دقائق قراءة</span>
+    <div class="kicker">Beginner's Guide</div>
+    <h1>How to Use AI for Conversation &amp; Support</h1>
+    <p class="dek">Practice, brainstorm, or think out loud, anytime — starting from the very basics, plus honest limits on what it can't replace.</p>
+    <span class="meta">Aiverture &middot; Updated July 2026 &middot; 5 min read</span>
 
     <article>
-      <p>أحيانًا لا تحتاج إلى إجابة — تحتاج إلى التحدث عن شيء، أو التدرب على ما ستقوله، أو مجرد التفكير بصوت عالٍ مع شيء يستجيب. الذكاء الاصطناعي مفيد فعليًا هنا، ضمن حدود حقيقية تستحق المعرفة مسبقًا.</p>
+      <p>Sometimes you don't need an answer — you need to talk something through, practice what you're going to say, or just think out loud with something that responds. AI is genuinely useful here, within real limits worth knowing upfront.</p>
 
-      <h2>ما الذي يفيد فيه هذا فعليًا</h2>
-      <p>التدرب على محادثة قبل خوضها، العصف الذهني بصوت عالٍ دون حكم، أو مجرد تنظيم أفكارك بشرحها لشيء يتحدث معك. إنه متاح في أي وقت، بصبر لا نهائي لك لإعادة البدء أو إعادة الصياغة.</p>
+      <h2>What this is actually good for</h2>
+      <p>Practicing a conversation before you have it, brainstorming out loud without judgment, or just organizing your thoughts by explaining them to something that talks back. It's available any time, with infinite patience for you to restart or rephrase.</p>
 
-      <h2>أمثلة حقيقية لتجربتها</h2>
-      <div class="example-box"><span class="cat">التدرب لشيء حقيقي</span><p>"ساعدني في التدرب لمقابلة عمل — اسألني أسئلة شائعة لوظيفة تسويق."</p></div>
-      <div class="example-box"><span class="cat">التحضير لمحادثة صعبة</span><p>"أحتاج التحدث مع زميلي في السكن عن توزيع الأعمال المنزلية بشكل أعدل. ساعدني في معرفة كيفية طرح الموضوع بهدوء."</p></div>
-      <div class="example-box"><span class="cat">التفكير بصوت عالٍ</span><p>"أنا متردد بشأن قرار — هل يمكنني فقط التحدث عنه معك؟"</p></div>
-      <div class="example-box"><span class="cat">العصف الذهني دون حكم</span><p>"لدي فكرة نصف مكتملة، ساعدني في التفكير بصوت عالٍ ومعرفة إذا كانت منطقية."</p></div>
+      <h2>Real examples to try</h2>
+      <div class="example-box"><span class="cat">Practicing for something real</span><p>"Help me practice for a job interview — ask me common questions for a marketing role."</p></div>
+      <div class="example-box"><span class="cat">Preparing for a hard conversation</span><p>"I need to talk to my roommate about splitting chores more fairly. Help me figure out how to bring it up calmly."</p></div>
+      <div class="example-box"><span class="cat">Thinking out loud</span><p>"I'm torn on a decision — can I just talk it through with you?"</p></div>
+      <div class="example-box"><span class="cat">Brainstorming without judgment</span><p>"I have a half-formed idea, help me think out loud and see if it holds up."</p></div>
 
-      <h2>كيف تحصل على نتائج أفضل</h2>
+      <h2>How to get better results</h2>
       <ul>
-        <li><strong>كن محددًا بشأن ما تريده.</strong> "فقط استمع" و"تحدَّ تفكيري" يحصلان على استجابات مختلفة تمامًا لكن مفيدة بنفس القدر — قل أيهما تريد فعليًا.</li>
-        <li><strong>تعامل معه كتجربة تمرين، وليس الشيء الحقيقي.</strong> التدرب على محادثة صعبة مع الذكاء الاصطناعي أولاً يمكن أن يساعدك فعليًا على الشعور بمزيد من الاستعداد للمحادثة الحقيقية مع شخص حقيقي.</li>
+        <li><strong>Be specific about what you want.</strong> "Just listen" and "challenge my thinking" get very different, equally useful responses — say which one you actually want.</li>
+        <li><strong>Treat it like a practice run, not the real thing.</strong> Rehearsing a hard conversation with AI first can genuinely help you feel more prepared for the real one with a real person.</li>
       </ul>
 
-      <div class="callout"><strong>حد صادق، يستحق القراءة:</strong> يمكن أن يكون الذكاء الاصطناعي مساحة مفيدة للتفكير بصوت عالٍ، لكنه ليس بديلاً عن العلاقات الحقيقية، أو عن معالج نفسي أو مستشار عندما تكون تعاني فعليًا. إذا شعرت أن شيئًا أثقل من "ساعدني في التفكير في هذا"، فيرجى التواصل مع شخص حقيقي تثق به، أو متخصص — هذا أهم من أي شيء يمكن أن يقدمه الذكاء الاصطناعي.</div>
+      <div class="callout"><strong>An honest limit, worth reading:</strong> AI can be a helpful space to think out loud, but it isn't a substitute for real relationships, or for a therapist or counselor when you're genuinely struggling. If something feels heavier than "help me think this through," please reach out to a real person you trust, or a professional — that matters more than anything an AI can offer.</div>
 
-      <h2>أول شيء تجربه</h2>
-      <p>فكّر في محادثة واحدة كنت تؤجلها، وتدرب على كيفية بدئها. انظر كيف يبدو الشعور بقولها بصوت عالٍ أولاً، حتى لذكاء اصطناعي.</p>
+      <h2>Your first thing to try</h2>
+      <p>Think of one conversation you've been putting off, and practice how you'd open it. See how it feels to say it out loud first, even to an AI.</p>
     </article>
 
     <div class="cta">
-      <h2>جرّبه بنفسك، مجانًا</h2>
-      <p>فكّر في شيء بصوت عالٍ، دون حكم.</p>
-      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">جرّب Claude &larr;</a>
+      <h2>Try it yourself, free</h2>
+      <p>Think something through, out loud, with no judgment.</p>
+      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">Try Claude &rarr;</a>
     </div>
 
-    <footer>Aiverture — الجسر بين تعلّم الذكاء الاصطناعي واستخدامه.<br>
-    <a href="/ar/">aiverture.com</a> &middot; <a href="/ar/learn.html">العودة إلى مكتبة التعلّم</a></footer>
+    <footer>Aiverture — the bridge between learning AI and creating with it.<br>
+    <a href="/">aiverture.com</a> &middot; <a href="/learn.html">Back to the Learning Library</a></footer>
   </div>
 </body>
 </html>
