@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كيف تكتب أوامر أفضل للذكاء الاصطناعي (دليل المبتدئين، 2026) | Aiverture</title>
+<meta name="description" content="دليل المبتدئين لكتابة أوامر أفضل للذكاء الاصطناعي — المعادلة البسيطة، أمثلة حقيقية قبل/بعد، والأخطاء الشائعة لتجنبها.">
+<meta property="og:title" content="كيف تكتب أوامر أفضل للذكاء الاصطناعي">
+<meta property="og:description" content="المعادلة البسيطة، أمثلة حقيقية قبل/بعد — بدءًا من الأساسيات تمامًا.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#080b18">
+<link rel="canonical" href="https://aiverture.com/ar/how-to-write-better-ai-prompts.html">
+<link rel="alternate" hreflang="en" href="https://aiverture.com/how-to-write-better-ai-prompts.html">
+<link rel="alternate" hreflang="ar" href="https://aiverture.com/ar/how-to-write-better-ai-prompts.html">
+<link rel="alternate" hreflang="x-default" href="https://aiverture.com/how-to-write-better-ai-prompts.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23080b18'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%236ea0ff'/%3E%3Cstop offset='100%25' stop-color='%23ffa15e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #080b18; --navy: #10193a; --navy-2: #16224d;
+    --blue: #2f6fed; --blue-soft: #6ea0ff; --orange: #ff6a1a; --orange-soft: #ffa15e;
+    --white: #f5f7fb; --slate: #8a97c2; --border: rgba(255,255,255,0.09);
+    --font-display: 'Tajawal', 'Space Grotesk', sans-serif; --font-body: 'Tajawal', 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--white); font-family: var(--font-body); min-height: 100vh; }
+  body {
+    background: radial-gradient(ellipse 900px 500px at 20% -10%, rgba(47,111,237,0.2), transparent),
+      radial-gradient(ellipse 900px 500px at 85% 10%, rgba(255,106,26,0.1), transparent), var(--ink);
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; text-decoration: none; color: var(--white); }
+  .logo span { color: var(--orange); }
+  .back-link { font-size: 13px; color: var(--slate); text-decoration: none; }
+  .back-link:hover { color: var(--white); }
+  .kicker { font-family: var(--font-display); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue-soft); margin-bottom: 12px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 4.5vw, 38px); line-height: 1.2; margin-bottom: 16px; }
+  .dek { color: var(--slate); font-size: 17px; line-height: 1.6; margin-bottom: 12px; }
+  .meta { font-size: 12px; color: var(--slate); margin-bottom: 44px; display: block; }
+  article h2 { font-family: var(--font-display); font-size: 22px; margin: 40px 0 14px; }
+  article p { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 16px; }
+  article ul, article ol { margin: 0 0 20px 20px; }
+  article li { font-size: 15.5px; line-height: 1.75; color: #d5dbf0; margin-bottom: 10px; }
+  article strong { color: var(--white); }
+  article a { color: var(--blue-soft); }
+
+  .compare { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 24px; }
+  @media (min-width: 560px) { .compare { grid-template-columns: 1fr 1fr; } }
+  .compare-box { border-radius: 12px; padding: 16px 18px; border: 1px solid var(--border); }
+  .compare-box.weak { background: rgba(255,80,80,0.06); border-color: rgba(255,80,80,0.25); }
+  .compare-box.strong { background: rgba(80,200,140,0.06); border-color: rgba(80,200,140,0.25); }
+  .compare-box .label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; display: block; }
+  .compare-box.weak .label { color: #ff8080; }
+  .compare-box.strong .label { color: #66d19e; }
+  .compare-box p { margin-bottom: 0; font-style: italic; color: var(--white); font-size: 14px; }
+
+  .callout { background: var(--navy-2); border: 1px solid var(--border); border-right: 3px solid var(--orange-soft); border-radius: 10px; padding: 18px 20px; margin: 28px 0; font-size: 14.5px; color: var(--slate); line-height: 1.6; }
+  .callout strong { color: var(--orange-soft); }
+  .cta { margin-top: 56px; text-align: center; background: linear-gradient(180deg, var(--navy-2), var(--navy)); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
+  .cta h2 { margin-top: 0; }
+  .cta p { color: var(--slate); font-size: 14.5px; margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: linear-gradient(90deg, var(--blue-soft), var(--orange-soft)); color: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 14.5px; padding: 13px 26px; border-radius: 10px; text-decoration: none; }
+  footer { text-align: center; margin-top: 56px; color: var(--slate); font-size: 12.5px; }
+  footer a { color: var(--slate); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="/ar/"><span>AI</span>verture</a>
+      <a class="back-link" href="/ar/">&rarr; العودة للرئيسية</a>
+    </div>
+
+    <div class="kicker">دليل المبتدئين</div>
+    <h1>كيف تكتب أوامر أفضل للذكاء الاصطناعي</h1>
+    <p class="dek">الفرق بين إجابة ذكاء اصطناعي متوسطة وأخرى مفيدة فعليًا هو دائمًا تقريبًا الأمر، وليس الأداة.</p>
+    <span class="meta">Aiverture &middot; آخر تحديث يوليو 2026 &middot; 6 دقائق قراءة</span>
+
+    <article>
+      <p>يمكن لشخصين أن يسألا نفس الذكاء الاصطناعي نفس السؤال الأساسي ويحصلا على إجابات مختلفة تمامًا في الجودة — ليس لأن أحدهما لديه ذكاء اصطناعي "أفضل"، بل لأن أحدهما يعرف كيف يسأل. إليك كيف يعمل هذا بالضبط.</p>
+
+      <h2>الفكرة الواحدة التي تغيّر كل شيء</h2>
+      <p>تعامل مع الذكاء الاصطناعي كزميل عمل جديد وذكي في يومه الأول، وليس محرك بحث. محرك البحث يكافئ أجزاء الكلمات المفتاحية القصيرة. زميل العمل الجديد يحتاج سياقًا وتفاصيل وفهمًا واضحًا لكيف يبدو "الإنجاز" — وكذلك الذكاء الاصطناعي.</p>
+
+      <h2>المعادلة البسيطة: السياق + المهمة + الشكل</h2>
+      <p><strong>السياق</strong> — من أنت، ماذا تحاول أن تفعل، ماذا تعرف بالفعل. <strong>المهمة</strong> — الشيء الفعلي الذي تريد إنجازه، مذكور بوضوح. <strong>الشكل</strong> — كيف تريد تشكيل الإجابة (قائمة، فقرة قصيرة، جدول، نبرة عفوية أم رسمية).</p>
+      <p>لست بحاجة للثلاثة في كل أمر، لكن اللجوء لهذا الهيكل يحوّل الطلبات الغامضة إلى دقيقة.</p>
+
+      <h2>قبل وبعد: أمثلة حقيقية</h2>
+
+      <div class="compare">
+        <div class="compare-box weak"><span class="label">ضعيف</span><p>"اكتب عن التسويق"</p></div>
+        <div class="compare-box strong"><span class="label">قوي</span><p>"أدير مقهى صغير. اكتب 3 تسميات توضيحية قصيرة لإنستغرام تعلن عن مشروب موسمي جديد، بنبرة عفوية وودودة."</p></div>
+      </div>
+
+      <div class="compare">
+        <div class="compare-box weak"><span class="label">ضعيف</span><p>"اشرح الاستثمار"</p></div>
+        <div class="compare-box strong"><span class="label">قوي</span><p>"اشرح الاستثمار في صناديق المؤشرات لشخص لم يستثمر من قبل، باستخدام تشبيه بسيط من الواقع."</p></div>
+      </div>
+
+      <div class="compare">
+        <div class="compare-box weak"><span class="label">ضعيف</span><p>"ساعدني في سيرتي الذاتية"</p></div>
+        <div class="compare-box strong"><span class="label">قوي</span><p>"راجع سيرتي الذاتية لوظيفة تسويق. أشر إلى أي شيء غامض أو يمكن أن يكون أقوى برقم أو نتيجة محددة."</p></div>
+      </div>
+
+      <h2>خمس عادات تساعد باستمرار</h2>
+      <ol>
+        <li><strong>قل لمن هذا موجّه.</strong> "اشرح هذا لطفل عمره 10 سنوات" و"اشرح هذا لزميل مهندس" ينتجان إجابات مختلفة تمامًا، وكلاهما مفيد.</li>
+        <li><strong>أعطِ قيودًا حقيقية.</strong> الميزانية، الطول، الموعد النهائي، النبرة — كلما زاد التفصيل الحقيقي، قلّت عمومية النتيجة.</li>
+        <li><strong>اطلب خيارات، وليس إجابة واحدة فقط.</strong> "أعطني 3 نسخ" غالبًا ما يكشف شيئًا أفضل من الفكرة الأولى وحدها.</li>
+        <li><strong>كرّر بدلاً من البدء من جديد.</strong> "اجعله أقصر" أو "أكثر عفوية" يبني على ما هو جيد بالفعل، بدلاً من خسارة التقدم.</li>
+        <li><strong>أظهر مثالاً عندما تستطيع.</strong> "اكتبه بأسلوب مثل هذا: [الصق مثالاً]" هي واحدة من أسرع الطرق للحصول على النبرة التي تريدها بالضبط.</li>
+      </ol>
+
+      <h2>أخطاء شائعة لتجنبها</h2>
+      <ul>
+        <li><strong>أن تكون غامضًا جدًا، ثم تلوم الأداة.</strong> طلب من سطر واحد نادرًا ما يحصل على نتيجة رائعة — هذا صحيح أيضًا عند طلب المساعدة من شخص.</li>
+        <li><strong>قبول المسودة الأولى كنهائية.</strong> القوة الحقيقية في التبادل ذهابًا وإيابًا، وليس الاستجابة الأولى.</li>
+        <li><strong>نسيان التحقق المزدوج من التفاصيل المهمة.</strong> لأي شيء ذي مخاطر حقيقية، تحقق من الحقائق بدلاً من الثقة بإجابات تبدو واثقة دون تفكير.</li>
+      </ul>
+
+      <div class="callout"><strong>يستحق المعرفة:</strong> كتابة الأوامر الجيدة مهارة تنتقل عبر الأدوات — ChatGPT وClaude وGemini كلها تستجيب جيدًا لنفس المبادئ الأساسية أعلاه. تعلّمها مرة، استخدمها في كل مكان.</div>
+
+      <h2>أول شيء تجربه</h2>
+      <p>خذ شيئًا تسأله عادة في جملة قصيرة واحدة، وأعد كتابته باستخدام السياق + المهمة + الشكل. قارن الإجابتين جنبًا إلى جنب — الفرق عادة فوري.</p>
+    </article>
+
+    <div class="cta">
+      <h2>ضع هذا موضع التطبيق</h2>
+      <p>جرّب سؤالاً حقيقيًا باستخدام ما تعلّمته للتو.</p>
+      <a class="cta-btn" href="https://claude.ai" target="_blank" rel="noopener">جرّب Claude &larr;</a>
+    </div>
+
+    <footer>Aiverture — الجسر بين تعلّم الذكاء الاصطناعي واستخدامه.<br>
+    <a href="/ar/">aiverture.com</a> &middot; <a href="/ar/learn.html">العودة إلى مكتبة التعلّم</a></footer>
+  </div>
+</body>
+</html>
